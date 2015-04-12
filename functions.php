@@ -114,7 +114,7 @@ add_action( 'wp_head', 'magnus_javascript_detection', 0 );
  */
 function magnus_scripts() {
 	// Add custom fonts, used in the main stylesheet.
-	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Montserrat');
+	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Montserrat:700|Roboto+Slab:300,700,400)');
     wp_enqueue_style( 'googleFonts');
 
 	// Add Genericons, used in the main stylesheet.
@@ -147,7 +147,7 @@ add_action( 'wp_enqueue_scripts', 'magnus_scripts' );
  * @since Magnus 2.0
  */
 function magnus_admin_fonts() {
-	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Montserrat');
+	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Montserrat:700|Roboto+Slab:300,700,400)');
     wp_enqueue_style( 'googleFonts');
 }
 add_action( 'admin_print_scripts-appearance_page_custom-header', 'magnus_admin_fonts' );
