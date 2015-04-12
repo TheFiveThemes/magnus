@@ -1,4 +1,22 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: $font__headings;
 	clear: both;
+    text-transform: uppercase;
+}
+
+.site-main {
+    h1 {
+        font-size: 2.893em;
+    }
+    h2 {
+        font-size: 1.929em;
+    }
+    h3 {
+        font-size: 1.5em;
+        letter-spacing: 0.05em;
+    }
+    h4 {
+        font-size: 1em;
+        letter-spacing: 0.08em;
+    }
 }
