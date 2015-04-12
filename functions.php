@@ -74,14 +74,14 @@ function magnus_setup() {
 	 * This theme styles the visual editor to resemble the theme style,
 	 * specifically font, colors, icons, and column width.
 	 */
-	add_editor_style( array( 'editor-style.css' ) );
+	add_editor_style( array( 'editor-style.css', magnus_fonts_url() ) );
 }
 endif; // magnus_setup
 add_action( 'after_setup_theme', 'magnus_setup' );
 
+
 /**
  * Register widget area.
- *
  * @link http://codex.wordpress.org/Function_Reference/register_sidebar
  */
 function magnus_widgets_init() {
@@ -97,11 +97,10 @@ function magnus_widgets_init() {
 }
 add_action( 'widgets_init', 'magnus_widgets_init' );
 
+
 /**
  * JavaScript Detection.
- *
  * Adds a `js` class to the root `<html>` element when JavaScript is detected.
- *
  * @since Magnus 2.0
  */
 function magnus_javascript_detection() {
@@ -109,13 +108,56 @@ function magnus_javascript_detection() {
 }
 add_action( 'wp_head', 'magnus_javascript_detection', 0 );
 
+
+/**
+ * Google Fonts
+ * Gives translators ability to deactivate fonts that don't include their language's characters.
+ * @since Magnus 2.0
+ */
+function magnus_fonts_url() {
+    $fonts_url = '';
+ 
+    /* Translators: If there are characters in your language that are not
+    * supported by Montserrat, translate this to 'off'. Do not translate
+    * into your own language.
+    */
+    $montserrat = _x( 'on', 'Montserrat font: on or off', 'magnus' );
+ 
+    /* Translators: If there are characters in your language that are not
+    * supported by Roboto Slab, translate this to 'off'. Do not translate
+    * into your own language.
+    */
+    $roboto_slab = _x( 'on', 'Roboto Slab font: on or off', 'magnus' );
+ 
+    if ( 'off' !== $montserrat || 'off' !== $roboto_slab ) {
+        $font_families = array();
+ 
+        if ( 'off' !== $montserrat ) {
+            $font_families[] = 'Montserrat:700';
+        }
+ 
+        if ( 'off' !== $roboto_slab ) {
+            $font_families[] = 'Roboto Slab:300,400,700';
+        }
+ 
+        $query_args = array(
+            'family' => urlencode( implode( '|', $font_families ) ),
+            'subset' => urlencode( 'latin,latin-ext' ),
+        );
+ 
+        $fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
+    }
+ 
+    return $fonts_url;
+}
+
+
 /**
  * Enqueue scripts and styles.
  */
 function magnus_scripts() {
 	// Add custom fonts, used in the main stylesheet.
-	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Montserrat:700|Roboto+Slab:300,700,400)');
-    wp_enqueue_style( 'googleFonts');
+	wp_enqueue_style( 'magnus-fonts', magnus_fonts_url(), array(), null );
 
 	// Add Genericons, used in the main stylesheet.
 	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.3' );
@@ -141,16 +183,6 @@ function magnus_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'magnus_scripts' );
 
-/**
- * Enqueue Google fonts style to admin screen for custom header display.
- *
- * @since Magnus 2.0
- */
-function magnus_admin_fonts() {
-	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Montserrat:700|Roboto+Slab:300,700,400)');
-    wp_enqueue_style( 'googleFonts');
-}
-add_action( 'admin_print_scripts-appearance_page_custom-header', 'magnus_admin_fonts' );
 
 /**
  * Implement the Custom Header feature.
