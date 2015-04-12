@@ -19,9 +19,19 @@ function magnus_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
+	if ( is_singular() ) {
+		$classes[] = 'single';
+	}
+
+	if ( has_nav_menu( 'primary' ) ) {
+		$classes[] = 'custom-menu';
+	}
+
 	return $classes;
 }
 add_filter( 'body_class', 'magnus_body_classes' );
+
+
 
 if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	/**
