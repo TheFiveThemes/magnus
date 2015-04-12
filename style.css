@@ -237,7 +237,8 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   clear: both;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 1; }
 
 .site-main h1 {
   font-size: 2.893em; }
@@ -579,7 +580,44 @@ a {
 # Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-10.1 Posts and pages
+## Header
+--------------------------------------------------------------*/
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 1em; }
+
+.admin-bar .site-header {
+  top: 42px; }
+
+.site-branding {
+  width: 80%;
+  float: left;
+  color: #fff; }
+  .site-branding h1 {
+    font-size: 0.857em;
+    letter-spacing: 0.1em;
+    margin-bottom: 0; }
+  .site-branding h2 {
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 0.667em;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.5); }
+
+.main-navigation {
+  width: 20%;
+  float: right;
+  clear: none; }
+
+.site-content {
+  padding: 0 1em; }
+
+/*--------------------------------------------------------------
+## Posts and pages
 --------------------------------------------------------------*/
 .sticky {
   display: block; }
@@ -605,14 +643,14 @@ a {
   margin: 0 0 1.5em; }
 
 /*--------------------------------------------------------------
-10.2 Asides
+## Asides
 --------------------------------------------------------------*/
 .blog .format-aside .entry-title,
 .archive .format-aside .entry-title {
   display: none; }
 
 /*--------------------------------------------------------------
-10.3 Comments
+## Comments
 --------------------------------------------------------------*/
 .comment-content a {
   word-wrap: break-word; }

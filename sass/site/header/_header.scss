@@ -1,0 +1,36 @@
+.site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 1em;
+}
+
+.admin-bar .site-header {
+    top: 42px;
+}
+
+.site-branding {
+    width: 80%;
+    float: left;
+    color: #fff;
+    h1 {
+        font-size: 0.857em;
+        letter-spacing: 0.1em;
+        margin-bottom: 0;
+    }
+    h2 {
+        font-family: $font__main;
+        font-size: 0.667em;
+        font-weight: 400;
+        text-transform: none;
+        letter-spacing: 0.1em;
+        color: rgba(255,255,255,.5);
+    }
+}
+
+.main-navigation {
+    width: 20%;
+    float: right;
+    clear: none;
+}
