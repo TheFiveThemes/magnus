@@ -1,3 +1,14 @@
+// Colors
+$color__base: #141932;
+$color__base80: tint($color__base,20%);
+$color__base60: tint($color__base,40%);
+
+$color__accent: #eb6e78;
+$color__accent90: tint($color__accent,10%);
+
+
+// Color Applications
+
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
@@ -8,11 +19,12 @@ $color__background-ins: #fff9c0;
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__text-main: #404040;
+$color__text-main: $color__base60;
+$color__headings: $color__base80;
 
-$color__link: royalblue;
-$color__link-visited: purple;
-$color__link-hover: midnightblue;
+$color__link: $color__accent;
+$color__link-visited: $color__accent90;
+$color__link-hover: $color__base80;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;

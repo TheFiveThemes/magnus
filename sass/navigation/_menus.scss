@@ -1,8 +1,8 @@
-.main-navigation {
-	clear: both;
+.site-header .main-navigation {
 	display: block;
-	float: left;
-	width: 100%;
+	float: right;
+	width: 30%;
+	text-align: right;
 
 	ul {
 		list-style: none;
@@ -11,7 +11,8 @@
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
+			display: inline-block;
+			text-align: right;
 			position: absolute;
 			top: 1.5em;
 			left: -999em;

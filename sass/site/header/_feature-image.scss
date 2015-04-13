@@ -1,0 +1,11 @@
+.site-header-image {
+    max-height: 80vh;
+    min-height: 200px;
+    overflow: hidden;
+    background: $color__base;
+    line-height: 0;
+    img {
+        width: 100%;
+        opacity: 0.6;
+    }
+}

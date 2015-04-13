@@ -228,7 +228,7 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: #727584;
   font-family: "Roboto Slab", sans-serif;
   font-size: 21px;
   font-weight: 300;
@@ -238,18 +238,19 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif;
   clear: both;
   text-transform: uppercase;
-  line-height: 1; }
+  line-height: 1;
+  color: #43475b; }
 
 .site-main h1 {
-  font-size: 2.893em; }
+  font-size: 2.8935em; }
 .site-main h2 {
-  font-size: 1.929em; }
+  font-size: 2.25em; }
 .site-main h3 {
   font-size: 1.5em;
-  letter-spacing: 0.05em; }
+  letter-spacing: 0.0501777168em; }
 .site-main h4 {
   font-size: 1em;
-  letter-spacing: 0.08em; }
+  letter-spacing: 0.0877914952em; }
 
 p {
   margin-bottom: 1.5em; }
@@ -268,7 +269,7 @@ pre {
   font-family: "Courier 10 Pitch", Courier, monospace;
   font-size: 15px;
   font-size: 0.9375rem;
-  line-height: 1.929;
+  line-height: 1.929em;
   margin-bottom: 1.6em;
   max-width: 100%;
   overflow: auto;
@@ -416,11 +417,11 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-  color: royalblue; }
+  color: #eb6e78; }
   a:visited {
-    color: purple; }
+    color: #ed7c85; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #43475b; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -429,35 +430,36 @@ a {
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
-.main-navigation {
-  clear: both;
+.site-header .main-navigation {
   display: block;
-  float: left;
-  width: 100%; }
-  .main-navigation ul {
+  float: right;
+  width: 30%;
+  text-align: right; }
+  .site-header .main-navigation ul {
     list-style: none;
     margin: 0;
     padding-left: 0; }
-    .main-navigation ul ul {
+    .site-header .main-navigation ul ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
+      display: inline-block;
+      text-align: right;
       position: absolute;
       top: 1.5em;
       left: -999em;
       z-index: 99999; }
-      .main-navigation ul ul ul {
+      .site-header .main-navigation ul ul ul {
         left: -999em;
         top: 0; }
-      .main-navigation ul ul li:hover > ul {
+      .site-header .main-navigation ul ul li:hover > ul {
         left: 100%; }
-      .main-navigation ul ul a {
+      .site-header .main-navigation ul ul a {
         width: 200px; }
-    .main-navigation ul li:hover > ul {
+    .site-header .main-navigation ul li:hover > ul {
       left: auto; }
-  .main-navigation li {
+  .site-header .main-navigation li {
     float: left;
     position: relative; }
-  .main-navigation a {
+  .site-header .main-navigation a {
     display: block;
     text-decoration: none; }
 
@@ -587,34 +589,49 @@ a {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 0 1em; }
+  padding: 0.5715555556em 1em;
+  z-index: 9999; }
 
 .admin-bar .site-header {
   top: 42px; }
 
 .site-branding {
-  width: 80%;
+  width: 70%;
   float: left;
   color: #fff; }
   .site-branding h1 {
-    font-size: 0.857em;
+    font-size: 1em;
     letter-spacing: 0.1em;
-    margin-bottom: 0; }
+    margin: 0 0 0.381037037em; }
+    .site-branding h1 a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none; }
   .site-branding h2 {
     font-family: "Roboto Slab", sans-serif;
-    font-size: 0.667em;
+    font-size: 0.6666666667em;
     font-weight: 400;
     text-transform: none;
     letter-spacing: 0.1em;
-    color: rgba(255, 255, 255, 0.5); }
+    margin: 0;
+    color: rgba(255, 255, 255, 0.6); }
 
-.main-navigation {
-  width: 20%;
-  float: right;
-  clear: none; }
+/*--------------------------------------------------------------
+## Header Feature Image
+--------------------------------------------------------------*/
+.site-header-image {
+  max-height: 80vh;
+  min-height: 200px;
+  overflow: hidden;
+  background: #141932;
+  line-height: 0; }
+  .site-header-image img {
+    width: 100%;
+    opacity: 0.6; }
 
 .site-content {
-  padding: 0 1em; }
+  padding: 0 1em;
+  margin: 0 auto;
+  max-width: 38.443359375em; }
 
 /*--------------------------------------------------------------
 ## Posts and pages

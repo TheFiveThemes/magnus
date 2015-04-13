@@ -3,7 +3,8 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 0 1em;
+    padding: ms(-3) ms(0);
+    z-index: 9999;
 }
 
 .admin-bar .site-header {
@@ -11,26 +12,25 @@
 }
 
 .site-branding {
-    width: 80%;
+    width: 70%;
     float: left;
     color: #fff;
     h1 {
-        font-size: 0.857em;
+        font-size: ms(0);
         letter-spacing: 0.1em;
-        margin-bottom: 0;
+        margin: 0 0 ms(-5);
+        a {
+            color: rgba(white,.9);
+            text-decoration: none;
+        }
     }
     h2 {
         font-family: $font__main;
-        font-size: 0.667em;
+        font-size: ms(-2);
         font-weight: 400;
         text-transform: none;
         letter-spacing: 0.1em;
-        color: rgba(255,255,255,.5);
+        margin: 0;
+        color: rgba(white,.6);
     }
-}
-
-.main-navigation {
-    width: 20%;
-    float: right;
-    clear: none;
 }
