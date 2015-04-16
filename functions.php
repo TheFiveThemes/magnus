@@ -160,11 +160,12 @@ function magnus_scripts() {
 	wp_enqueue_style( 'magnus-fonts', magnus_fonts_url(), array(), null );
 
 	// Add Genericons, used in the main stylesheet.
-	wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.3' );
+	// wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.3' );
 
 	// Load our main stylesheet.
 	wp_enqueue_style( 'magnus-style', get_stylesheet_uri() );
 
+    // Load scripts
 	wp_enqueue_script( 'magnus-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'magnus-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -176,6 +177,11 @@ function magnus_scripts() {
 	if ( is_singular() && wp_attachment_is_image() ) {
 		wp_enqueue_script( 'magnus-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20150302' );
 	}
+
+    // If is front page or archive, load the fullscreen script
+    if ( is_front_page() || is_archive() ) {
+        wp_enqueue_script( 'magnus-fullscreen', get_template_directory_uri() . '/js/jquery.fullPage.min.js', array( 'jquery' ) );
+    }
 
 	// Javacript functions in Magnus.
 	wp_enqueue_script( 'magnus-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150302', true );
