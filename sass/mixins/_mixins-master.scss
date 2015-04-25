@@ -23,3 +23,18 @@
 }
 
 
+// Breakpoints for each query
+$smartphone: 480px;
+$tablet: 800px;
+$desktop: 1100px;
+@mixin respondTo($media) {
+  @if $media == upto-small {
+    @media (max-width: $smartphone) { @content; }
+  }
+  @else if $media == atleast-medium {
+    @media (min-width: $tablet) { @content; }
+  }
+  @else if $media == atleast-large {
+    @media (min-width: $desktop) { @content; }
+  }
+}

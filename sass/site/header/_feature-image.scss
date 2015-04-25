@@ -1,11 +1,27 @@
 .site-header-image {
+    position: relative;
     max-height: 80vh;
-    min-height: 200px;
+    min-height: 100px;
     overflow: hidden;
-    background: $color__base;
+    background: $color__background-feature;
     line-height: 0;
     img {
         width: 100%;
         opacity: 0.6;
     }
+}
+
+@media screen and (max-width: 501px) {
+    .single .site-header-image {
+        text-align: center;
+        height: 75vh;
+        img {
+            left: 50%;
+            @include transform(translateX(-50%));
+            height: 75vh;
+            width: auto;
+            max-width: 500%;
+        }
+    }
+    
 }

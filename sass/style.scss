@@ -32,11 +32,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Accessibility
 # Alignments
 # Clearings
-# Widgets
 # Content
     ## Posts and pages
     ## Asides
     ## Comments
+# Sidebar
+    ## Widgets
 # Infinite scroll
 # Media
     ## Captions
@@ -92,14 +93,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "modules/clearings";
 
 /*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-@import "site/secondary/widgets";
-
-/*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 @import "site/site";
+
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+@import "site/sidebar/sidebar";
 
 /*--------------------------------------------------------------
 # Infinite scroll
