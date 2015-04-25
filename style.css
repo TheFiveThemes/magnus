@@ -230,9 +230,9 @@ input,
 select,
 textarea {
   color: #727584;
-  font-family: "Roboto Slab", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 21px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5; }
 
 h1, h2, h3, h4, h5, h6 {
@@ -255,6 +255,9 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   margin-bottom: 1.5em; }
+
+strong {
+  font-weight: 600; }
 
 dfn, cite, em, i {
   font-style: italic; }
@@ -715,7 +718,7 @@ a {
     top: 0; }
   .home .site-header, .archive .site-header {
     position: relative;
-    background: #727584;
+    background: #43475b;
     margin-bottom: 2.25em; }
 
 .site-branding {
@@ -732,9 +735,10 @@ a {
       .site-branding h1 a:hover {
         color: #ed7c85; }
   .site-branding h2 {
-    font-family: "Roboto Slab", sans-serif;
+    font-family: "Source Sans Pro", sans-serif;
     font-size: 0.5715555556em;
     font-weight: 400;
+    font-style: italic;
     text-transform: none;
     letter-spacing: 0.0877914952em;
     margin: 0;
