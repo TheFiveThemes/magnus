@@ -10,21 +10,24 @@ $color__accent: #eb6e78;
 $color__accent90: tint($color__accent,10%);
 
 
-// Color Applications
 
+
+//
+// Color Applications
+//
+
+// Backgrounds
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
 $color__background-button: #e6e6e6;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
-
 $color__background-header: $color__base80;
 $color__background-feature: $color__base90;
-$color__background-drawer: $color__base90;
+$color__background-drawer: $color__accent;
 
-
-
+// Text
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;

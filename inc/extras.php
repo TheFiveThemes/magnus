@@ -27,9 +27,14 @@ function magnus_body_classes( $classes ) {
 		$classes[] = 'custom-menu';
 	}
 
+	if ( is_single() && has_post_thumbnail() ) {
+        $classes[] = 'has-featured-image';    
+    }
+
 	return $classes;
 }
 add_filter( 'body_class', 'magnus_body_classes' );
+
 
 
 

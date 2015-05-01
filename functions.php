@@ -127,17 +127,17 @@ function magnus_fonts_url() {
     * supported by Roboto Slab, translate this to 'off'. Do not translate
     * into your own language.
     */
-    $source_sans_pro = _x( 'on', 'Source Sans Pro font: on or off', 'magnus' );
+    $karla = _x( 'on', 'Source Sans Pro font: on or off', 'magnus' );
  
-    if ( 'off' !== $montserrat || 'off' !== $source_sans_pro ) {
+    if ( 'off' !== $montserrat || 'off' !== $karla ) {
         $font_families = array();
  
         if ( 'off' !== $montserrat ) {
-            $font_families[] = 'Montserrat:700';
+            $font_families[] = 'Montserrat:400,700';
         }
  
-        if ( 'off' !== $source_sans_pro ) {
-            $font_families[] = 'Source Sans Pro:300,400,600,300italic,400italic,600italic';
+        if ( 'off' !== $karla ) {
+            $font_families[] = 'Karla:400,700,400italic,700italic';
         }
  
         $query_args = array(

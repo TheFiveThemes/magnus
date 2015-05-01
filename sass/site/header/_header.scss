@@ -1,24 +1,22 @@
 .site-header {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     padding: ms(0) ms(0) ms(1);
+    margin-bottom: ms(4);
     z-index: 9999;
-    .admin-bar & {
-        top: 42px;
-    }
-    .home.admin-bar &,
-    .archive.admin-bar & {
-        top: 0;
-    }
-    .home &,
-    .archive & {
-        position: relative;
-        background: $color__background-header;
-        margin-bottom: ms(4);
-    }
+    background: $color__background-header;
 
+    .has-featured-image & {
+        position: absolute;
+        background: transparent;
+        margin-bottom: 0;
+        
+    }
+    .admin-bar.has-featured-image & {
+        top: 42px;
+    }    
 }
 
 .site-branding {
@@ -39,7 +37,7 @@
     }
     h2 {
         font-family: $font__main;
-        font-size: ms(-3);
+        font-size: ms(-2);
         font-weight: 400;
         font-style: italic;
         text-transform: none;

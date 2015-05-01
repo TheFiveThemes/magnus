@@ -230,7 +230,7 @@ input,
 select,
 textarea {
   color: #727584;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Karla", sans-serif;
   font-size: 21px;
   font-weight: 400;
   line-height: 1.5; }
@@ -443,6 +443,7 @@ a {
   width: 50%;
   text-align: right;
   font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.1316872428em;
   line-height: 1;
@@ -488,7 +489,7 @@ a {
       opacity: 0;
       padding: 0.1975308642em 0.2540246914em;
       margin: 0;
-      background: rgba(43, 47, 70, 0.8); }
+      background: rgba(235, 110, 120, 0.8); }
       .site-header .main-navigation ul > li > ul li {
         margin: 0; }
         .site-header .main-navigation ul > li > ul li a {
@@ -529,7 +530,7 @@ a {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(43, 47, 70, 0.95);
+    background: rgba(235, 110, 120, 0.95);
     content: "";
     display: table; }
     .main-navigation ul.nav-menu li {
@@ -706,20 +707,20 @@ a {
 ## Header
 --------------------------------------------------------------*/
 .site-header {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   padding: 1em 1em 1.286em;
-  z-index: 9999; }
-  .admin-bar .site-header {
+  margin-bottom: 2.25em;
+  z-index: 9999;
+  background: #43475b; }
+  .has-featured-image .site-header {
+    position: absolute;
+    background: transparent;
+    margin-bottom: 0; }
+  .admin-bar.has-featured-image .site-header {
     top: 42px; }
-  .home.admin-bar .site-header, .archive.admin-bar .site-header {
-    top: 0; }
-  .home .site-header, .archive .site-header {
-    position: relative;
-    background: #43475b;
-    margin-bottom: 2.25em; }
 
 .site-branding {
   width: 50%;
@@ -735,8 +736,8 @@ a {
       .site-branding h1 a:hover {
         color: #ed7c85; }
   .site-branding h2 {
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 0.5715555556em;
+    font-family: "Karla", sans-serif;
+    font-size: 0.6666666667em;
     font-weight: 400;
     font-style: italic;
     text-transform: none;

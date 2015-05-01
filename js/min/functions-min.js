@@ -1,0 +1,1 @@
+function bigImageClass(){$(".entry-content img.size-full").each(function(){var s=$(this),t=$(this).closest("figure"),a=new Image;a.src=s.attr("src"),$(a).load(function(){var i=a.width;i>=1088&&$(s).addClass("size-big"),t.hasClass("wp-caption")&&i>=1088&&(t.addClass("caption-big"),t.removeAttr("style"))})})}
