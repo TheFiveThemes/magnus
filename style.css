@@ -460,7 +460,7 @@ a {
     color: #e7e8ea;
     text-decoration: none; }
     .site-header .main-navigation a:hover {
-      color: #ed7c85; }
+      color: #fff; }
   .site-header .main-navigation ul {
     list-style: none;
     margin: 0;
@@ -595,9 +595,9 @@ a {
       box-shadow: 0 0 0 transparent;
       text-shadow: 0 0 0 transparent;
       border: 0 none;
-      border-top: 3px solid #ed7c85; }
+      border-top: 3px solid #fff; }
       .menu-toggle:hover:before, .menu-toggle:hover:after {
-        border-top-color: #ed7c85; }
+        border-top-color: #fff; }
     .menu-toggle:active, .menu-toggle:visited, .menu-toggle:focus {
       border-color: transparent;
       border-top-color: #e7e8ea;
@@ -606,9 +606,9 @@ a {
         border-color: transparent;
         border-top-color: #e7e8ea; }
       .menu-toggle:active:hover, .menu-toggle:visited:hover, .menu-toggle:focus:hover {
-        border-top-color: #ed7c85; }
+        border-top-color: #fff; }
         .menu-toggle:active:hover:before, .menu-toggle:active:hover:after, .menu-toggle:visited:hover:before, .menu-toggle:visited:hover:after, .menu-toggle:focus:hover:before, .menu-toggle:focus:hover:after {
-          border-top-color: #ed7c85; } }
+          border-top-color: #fff; } }
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -715,11 +715,11 @@ a {
   margin-bottom: 2.25em;
   z-index: 9999;
   background: #43475b; }
-  .has-featured-image .site-header {
+  .featured-image .site-header, .header-image .site-header {
     position: absolute;
     background: transparent;
     margin-bottom: 0; }
-  .admin-bar.has-featured-image .site-header {
+  .admin-bar.featured-image .site-header, .admin-bar.header-image .site-header {
     top: 42px; }
 
 .site-branding {
@@ -729,12 +729,12 @@ a {
   .site-branding h1 {
     font-size: 0.6666666667em;
     letter-spacing: 0.1316872428em;
-    margin: 0 0 0.381037037em; }
+    margin: 0 0 0.4444444444em; }
     .site-branding h1 a {
       color: #e7e8ea;
       text-decoration: none; }
       .site-branding h1 a:hover {
-        color: #ed7c85; }
+        color: #fff; }
   .site-branding h2 {
     font-family: "Karla", sans-serif;
     font-size: 0.6666666667em;
@@ -751,16 +751,53 @@ a {
 /*--------------------------------------------------------------
 ## Header Feature Image
 --------------------------------------------------------------*/
+@-webkit-keyframes header-image-pulse {
+  0% {
+    -webkit-transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.2); }
+  100% {
+    -webkit-transform: scale(1); } }
+@-moz-keyframes header-image-pulse {
+  0% {
+    -moz-transform: scale(1); }
+  50% {
+    -moz-transform: scale(1.2); }
+  100% {
+    -moz-transform: scale(1); } }
+@keyframes header-image-pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); } }
 .site-header-image {
   position: relative;
-  max-height: 80vh;
-  min-height: 100px;
   overflow: hidden;
   background: #2b2f46;
   line-height: 0; }
   .site-header-image img {
     width: 100%;
-    opacity: 0.6; }
+    opacity: 0.5;
+    -webkit-animation: header-image-pulse 20s ease-in-out infinite;
+    -moz-animation: header-image-pulse 20s ease-in-out infinite;
+    animation: header-image-pulse 20s ease-in-out infinite; }
+  .featured-image .site-header-image, .header-image .site-header-image {
+    max-height: 80vh;
+    min-height: 100px; }
 
 @media screen and (max-width: 501px) {
   .single .site-header-image {

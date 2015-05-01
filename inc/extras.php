@@ -28,13 +28,16 @@ function magnus_body_classes( $classes ) {
 	}
 
 	if ( is_single() && has_post_thumbnail() ) {
-        $classes[] = 'has-featured-image';    
+        $classes[] = 'featured-image';    
+    }
+
+    if (get_header_image() != '') {
+    	$classes[] = 'header-image';
     }
 
 	return $classes;
 }
 add_filter( 'body_class', 'magnus_body_classes' );
-
 
 
 

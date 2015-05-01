@@ -41,7 +41,7 @@
 
 	</header><!-- #masthead -->
 
-	<?php if ( is_single() ) : ?>
+	
 	<section class="site-header-image">
 	<?php 
 		// Check if this is a post or page, if it has a thumbnail, and if it's a big one
@@ -53,7 +53,7 @@
 		<?php endif; // end check for featured image or standard header ?>
 
 	</section><!-- .site-header-image -->
-	<?php endif; // End single post image check. ?>
+	
 	
 	
 	<section id="content" class="site-content">

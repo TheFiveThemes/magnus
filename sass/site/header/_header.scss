@@ -8,13 +8,15 @@
     z-index: 9999;
     background: $color__background-header;
 
-    .has-featured-image & {
+    .featured-image &,
+    .header-image & {
         position: absolute;
         background: transparent;
         margin-bottom: 0;
         
     }
-    .admin-bar.has-featured-image & {
+    .admin-bar.featured-image &,
+    .admin-bar.header-image & {
         top: 42px;
     }    
 }
@@ -26,12 +28,13 @@
     h1 {
         font-size: ms(-2);
         letter-spacing: ms(-10);
-        margin: 0 0 ms(-5);
+        margin: 0 0 ms(-4);
         a {
             color: $color__headerlink;
             text-decoration: none;
             &:hover {
                 color: $color__headerlink-hover;
+                //text-decoration: underline;
             }
         }
     }
