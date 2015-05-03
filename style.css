@@ -888,6 +888,31 @@ blockquote.alignright {
   display: block; }
 
 /*--------------------------------------------------------------
+## Footer
+--------------------------------------------------------------*/
+.site-footer {
+  border-top: 4px solid #f3f3f4;
+  padding: 1em 0 1.286em;
+  margin: 2.25em 1em 0;
+  color: #d0d1d6; }
+  .site-footer .site-info {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; }
+    .site-footer .site-info li {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 0.6666666667em;
+      letter-spacing: 0.0501777168em;
+      margin: 0 0.6666666667em; }
+  .site-footer a {
+    color: #a1a3ad;
+    text-decoration: none; }
+    .site-footer a:hover {
+      color: #eb6e78; }
+
+/*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
 .sidebar {

@@ -27,6 +27,7 @@
 $smartphone: 480px;
 $tablet: 800px;
 $desktop: 1100px;
+
 @mixin respondTo($media) {
   @if $media == upto-small {
     @media (max-width: $smartphone) { @content; }
