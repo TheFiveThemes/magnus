@@ -27,7 +27,7 @@ function magnus_body_classes( $classes ) {
 		$classes[] = 'custom-menu';
 	}
 
-	if ( is_single() && has_post_thumbnail() ) {
+	if ( is_singular() && has_post_thumbnail() ) {
         $classes[] = 'featured-image';    
     }
 

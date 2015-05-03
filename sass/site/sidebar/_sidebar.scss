@@ -10,12 +10,16 @@
     z-index: 9000;
     background: $color__background-drawer;
 
-    padding: ms(0) ms(2);
+    padding: ms(0) ms(6) ms(0) ms(2);
     color: white;
 
     @include respondTo(atleast-medium) {
         width: 50vw;
         right: -50vw;
+    }
+
+    @include respondTo(upto-large) {
+        padding: ms(0) ms(2);
     }
 
     .sidebar-inner {

@@ -900,13 +900,16 @@ blockquote.alignright {
   overflow: scroll;
   overflow-x: hidden;
   z-index: 9000;
-  background: #43475b;
-  padding: 1em 1.5em;
+  background: #5a5e6f;
+  padding: 1em 3.375em 1em 1.5em;
   color: white; }
   @media (min-width: 800px) {
     .sidebar {
       width: 50vw;
       right: -50vw; } }
+  @media (min-width: 1100px) {
+    .sidebar {
+      padding: 1em 1.5em; } }
   .sidebar .sidebar-inner {
     max-width: 21.972515625em;
     margin: 0 auto; }

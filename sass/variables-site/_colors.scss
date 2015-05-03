@@ -3,6 +3,7 @@ $color__base: #141932;
 
 $color__base90: tint($color__base,10%);
 $color__base80: tint($color__base,20%);
+$color__base70: tint($color__base,30%);
 $color__base60: tint($color__base,40%);
 $color__base40: tint($color__base,60%);
 $color__base20: tint($color__base,80%);
@@ -31,7 +32,7 @@ $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 $color__background-header: $color__base80;
 $color__background-feature: $color__base90;
-$color__background-drawer: $color__base80;
+$color__background-drawer: $color__base70;
 
 // Text
 $color__text-screen: #21759b;
