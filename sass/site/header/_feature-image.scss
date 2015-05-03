@@ -1,12 +1,9 @@
 @include keyframes(header-image-pulse) {
-  0% {
+  0%, 100% {
     @include transform(scale(1));
   }
   50% {
-    @include transform(scale(1.2));
-  }
-  100%{
-    @include transform(scale(1));
+    @include transform(scale(1.1));
   }
 }
 
@@ -18,28 +15,27 @@
     line-height: 0;
     img {
         width: 100%;
-        opacity: 0.5;
-
+        opacity: 0.6;
         @include animation(header-image-pulse 20.0s ease-in-out infinite);
+        @include transform-origin(bottom center);
     }
     .featured-image &,
     .header-image & {
         max-height: 80vh;
         min-height: 100px;
     }
-}
 
-@media screen and (max-width: 501px) {
-    .single .site-header-image {
-        text-align: center;
-        height: 75vh;
-        img {
-            left: 50%;
-            @include transform(translateX(-50%));
-            height: 75vh;
-            width: auto;
-            max-width: 500%;
+    .single & {
+        @include respondTo(upto-small) {
+            text-align: center;
+            height: 70vh;
+            img {
+                left: 50%;
+                @include transform(translateX(-50%));
+                height: 70vh;
+                width: auto;
+                max-width: 500%;
+            }
         }
     }
-    
 }

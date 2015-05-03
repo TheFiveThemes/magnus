@@ -5,7 +5,6 @@
     width: 100%;
     padding: ms(0) ms(0) ms(1);
     margin-bottom: ms(4);
-    z-index: 9999;
     background: $color__background-header;
 
     .featured-image &,
@@ -22,9 +21,12 @@
 }
 
 .site-branding {
-    width: 50%;
+    position: relative;
+    width: 30%;
     float: left;
     color: #fff;
+    z-index: 9000;
+
     h1 {
         font-size: ms(-2);
         letter-spacing: ms(-10);
@@ -49,7 +51,7 @@
         color: rgba(white,.6);
     }
 
-    @include respondTo(upto-small) {
-        width: 70%;
+    @include respondTo(upto-medium) {
+        width: 80%;
     }
 }

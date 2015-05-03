@@ -26,3 +26,29 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.entry-header {
+    .entry-title {
+        margin-bottom: ms(-6);
+        a {
+            text-decoration: none;
+            color: $color__titlelink;
+            &:hover {
+                color: $color__titlelink-hover;
+            }
+        }
+    }
+    .entry-meta {
+        font-size: ms(-2);
+        text-transform: uppercase;
+        letter-spacing: ms(-15);
+        color: $color__text-aside;
+        a {
+            text-decoration: none;
+            color: $color__asidelink;
+            &:hover {
+                color: $color__asidelink-hover;
+            }
+        }
+    }
+}

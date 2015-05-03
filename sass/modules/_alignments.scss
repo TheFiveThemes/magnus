@@ -13,3 +13,17 @@
 .aligncenter {
 	@include center-block;
 }
+
+
+blockquote {
+    &.alignright,
+    &.alignleft {
+        width: ms(13);
+    }
+    &.alignleft {
+        margin-left: 0; 
+    }
+    &.alignright {
+        margin-right: 0; 
+    }
+}

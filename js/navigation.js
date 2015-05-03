@@ -35,16 +35,14 @@
 	button.onclick = function() {
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
 			container.className = container.className.replace( ' toggled', '' );
-			body.className = body.className.replace( ' menu-toggled', '' );
+			body.className = body.className.replace( ' sidebar-toggled', '' );
 			button.setAttribute( 'aria-expanded', 'false' );
 			menu.setAttribute( 'aria-expanded', 'false' );
-			// body.removeClass('menu-toggled');
 		} else {
 			container.className += ' toggled';
-			body.className += ' menu-toggled';
+			body.className += ' sidebar-toggled';
 			button.setAttribute( 'aria-expanded', 'true' );
 			menu.setAttribute( 'aria-expanded', 'true' );
-			//body.addClass('menu-toggled');
 		}
 	};
 

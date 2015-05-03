@@ -1,6 +1,43 @@
 .sidebar {
-    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: -100vw;
+    left: auto;
+    overflow: scroll;
+    overflow-x: hidden;
+    z-index: 9000;
+    background: $color__background-drawer;
+
+    padding: ms(0) ms(2);
+    color: white;
+
+    @include respondTo(atleast-medium) {
+        width: 50vw;
+        right: -50vw;
+    }
+
+    .sidebar-inner {
+        max-width: ms(15);
+        margin: 0 auto;
+    }
+
 }
+
+.sidebar-toggled {
+    .sidebar {
+        right: 0;
+    }
+    .site {
+        margin-left: -100vw;
+        @include respondTo(atleast-medium) {
+            width: 50vw;
+            margin-left: 0;
+        }
+    }
+}
+
 
 
 // $sidebar__size: 100vw;

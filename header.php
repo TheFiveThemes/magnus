@@ -35,12 +35,13 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php _e( 'Primary Menu', 'magnus' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'header-menu' ) ); ?>
+			<button class="sidebar-toggle" aria-controls="sidebar" aria-expanded="false">
+				<span class="sidebar-toggle-icon"><?php _e( 'Sidebar', 'magnus' ); ?></span>
+			</button>
 		</nav><!-- #site-navigation -->
 
 	</header><!-- #masthead -->
-
 	
 	<section class="site-header-image">
 	<?php 
@@ -53,7 +54,5 @@
 		<?php endif; // end check for featured image or standard header ?>
 
 	</section><!-- .site-header-image -->
-	
-	
-	
+
 	<section id="content" class="site-content">

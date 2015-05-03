@@ -1,13 +1,19 @@
 // Colors
 $color__base: #141932;
+
 $color__base90: tint($color__base,10%);
 $color__base80: tint($color__base,20%);
 $color__base60: tint($color__base,40%);
+$color__base40: tint($color__base,60%);
 $color__base20: tint($color__base,80%);
 $color__base10: tint($color__base,90%);
 
+
 $color__accent: #eb6e78;
+
 $color__accent90: tint($color__accent,10%);
+$color__accent60: tint($color__accent,40%);
+$color__accent20: tint($color__accent,80%);
 
 
 
@@ -25,13 +31,15 @@ $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 $color__background-header: $color__base80;
 $color__background-feature: $color__base90;
-$color__background-drawer: $color__accent;
+$color__background-drawer: $color__base80;
 
 // Text
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
+
 $color__text-main: $color__base60;
+$color__text-aside: $color__base20;
 $color__headings: $color__base80;
 $color__text-sidebar: $color__base20;
 
@@ -39,8 +47,17 @@ $color__link: $color__accent;
 $color__link-visited: $color__accent90;
 $color__link-hover: $color__base80;
 
+$color__titlelink: $color__base80;
+$color__titlelink-hover: $color__accent;
+
+$color__asidelink: $color__base40;
+$color__asidelink-hover: $color__accent;
+
 $color__headerlink: $color__base10;
 $color__headerlink-hover: #fff;
+
+$color__headernavlink: rgba($color__base10,.7);
+$color__headernavlink-hover: #fff;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;

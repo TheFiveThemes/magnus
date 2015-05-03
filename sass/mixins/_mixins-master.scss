@@ -31,6 +31,9 @@ $desktop: 1100px;
   @if $media == upto-small {
     @media (max-width: $smartphone) { @content; }
   }
+  @if $media == upto-medium {
+    @media (max-width: $tablet) { @content; }
+  }
   @else if $media == atleast-medium {
     @media (min-width: $tablet) { @content; }
   }
