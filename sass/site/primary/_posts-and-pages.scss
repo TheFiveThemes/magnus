@@ -3,7 +3,9 @@
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+	margin: 0 0 ms(4);
+    padding: 0 0 ms(4);
+    border-bottom: 4px solid $color__base05;
 }
 
 .byline,
@@ -19,7 +21,14 @@
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	margin: ms(2) 0;
+
+    p:first-child {
+        margin-top: 0;
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .page-links {
@@ -38,17 +47,22 @@
             }
         }
     }
-    .entry-meta {
-        font-size: ms(-2);
-        text-transform: uppercase;
-        letter-spacing: ms(-15);
-        color: $color__text-aside;
-        a {
-            text-decoration: none;
-            color: $color__asidelink;
-            &:hover {
-                color: $color__asidelink-hover;
-            }
+}
+
+.entry-header .entry-meta,
+.entry-footer {
+    font-size: ms(-2);
+    text-transform: uppercase;
+    letter-spacing: ms(-15);
+    color: $color__text-aside;
+    a {
+        text-decoration: none;
+        color: $color__asidelink;
+        &:hover {
+            color: $color__asidelink-hover;
         }
+    }
+    span {
+        margin-right: ms(0);
     }
 }

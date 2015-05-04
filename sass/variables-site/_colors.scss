@@ -6,6 +6,7 @@ $color__base80: tint($color__base,20%);
 $color__base70: tint($color__base,30%);
 $color__base60: tint($color__base,40%);
 $color__base40: tint($color__base,60%);
+$color__base30: tint($color__base,70%);
 $color__base20: tint($color__base,80%);
 $color__base10: tint($color__base,90%);
 $color__base05: tint($color__base,95%);
@@ -29,7 +30,7 @@ $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
 $color__background-button: #e6e6e6;
-$color__background-pre: #eee;
+$color__background-pre: $color__base05;
 $color__background-ins: #fff9c0;
 $color__background-header: $color__base80;
 $color__background-feature: $color__base90;
@@ -64,7 +65,7 @@ $color__headerlink-hover: #fff;
 $color__headernavlink: rgba($color__base10,.7);
 $color__headernavlink-hover: #fff;
 
-$color__footerlink: $color__base40;
+$color__footerlink: $color__base30;
 $color__footerlink-hover: $color__accent;
 
 // Borders (deprecated)

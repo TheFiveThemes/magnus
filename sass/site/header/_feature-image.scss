@@ -9,16 +9,19 @@
 
 .site-header-image {
     position: relative;
-    
     overflow: hidden;
     background: $color__background-feature;
     line-height: 0;
+
     img {
-        width: 100%;
+        max-width: 100%;
+        width: auto;
+        height: auto;
         opacity: 0.6;
         @include animation(header-image-pulse 20.0s ease-in-out infinite);
         @include transform-origin(bottom center);
     }
+
     .featured-image &,
     .header-image & {
         max-height: 80vh;
@@ -27,14 +30,16 @@
 
     .single & {
         @include respondTo(upto-small) {
-            text-align: center;
             height: 70vh;
             img {
-                left: 50%;
-                @include transform(translateX(-50%));
-                height: 70vh;
+                margin-left: -40%;
+
+                min-width: 100%;
+                min-height: 100%;
                 width: auto;
-                max-width: 500%;
+                height: auto;
+                max-height: 70vh;
+                max-width: 1000%;
             }
         }
     }

@@ -30,4 +30,15 @@ h1, h2, h3, h4, h5, h6 {
         font-size: ms(0);
         letter-spacing: ms(-12);
     }
+
+    .sidebar-toggled & {
+        @include respondTo(upto-large) {
+            h1 {
+                font-size: ms(4);
+            }
+            h2 {
+                font-size: ms(3);
+            }
+        }
+    }
 }

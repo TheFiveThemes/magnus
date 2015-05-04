@@ -39,7 +39,7 @@ $desktop: 1100px;
     @media (min-width: $tablet) { @content; }
   }
   @else if $media == upto-large {
-    @media (min-width: $desktop) { @content; }
+    @media (max-width: $desktop) { @content; }
   }
   @else if $media == atleast-large {
     @media (min-width: $desktop) { @content; }

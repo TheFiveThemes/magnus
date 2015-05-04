@@ -261,9 +261,14 @@ h1, h2, h3, h4, h5, h6 {
 .site-main h4 {
   font-size: 1em;
   letter-spacing: 0.0877914952em; }
+@media (max-width: 1100px) {
+  .sidebar-toggled .site-main h1 {
+    font-size: 2.25em; }
+  .sidebar-toggled .site-main h2 {
+    font-size: 1.929em; } }
 
 p {
-  margin-bottom: 1.5em; }
+  margin-bottom: 1em; }
 
 strong {
   font-weight: 600; }
@@ -272,16 +277,21 @@ dfn, cite, em, i {
   font-style: italic; }
 
 blockquote {
-  margin: 0 1.5em; }
+  margin: 0 0 1em;
+  font-style: italic;
+  font-size: 1.5em;
+  line-height: 1.286em;
+  color: #eb6e78; }
+  blockquote cite,
+  blockquote cite a {
+    color: #a1a3ad; }
 
 address {
-  margin: 0 0 1.5em; }
+  margin: 0 0 1em; }
 
 pre {
-  background: #eee;
+  background: #f3f3f4;
   font-family: "Courier 10 Pitch", Courier, monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
   line-height: 1.929em;
   margin-bottom: 1.6em;
   max-width: 100%;
@@ -290,8 +300,9 @@ pre {
 
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 15px;
-  font-size: 0.9375rem; }
+  font-size: 0.6666666667em;
+  background: #f3f3f4;
+  padding: 0.2962962963em 0.6666666667em; }
 
 abbr, acronym {
   border-bottom: 1px dotted #666;
@@ -340,7 +351,7 @@ hr {
   margin-bottom: 1.5em; }
 
 ul, ol {
-  margin: 0 0 1.5em 3em; }
+  margin: 0 0 1em 1em; }
 
 ul {
   list-style: disc; }
@@ -351,13 +362,13 @@ ol {
 li > ul,
 li > ol {
   margin-bottom: 0;
-  margin-left: 1.5em; }
+  margin-left: 1em; }
 
 dt {
   font-weight: bold; }
 
 dd {
-  margin: 0 1.5em 1.5em; }
+  margin: 0 1em 1em; }
 
 img {
   height: auto;
@@ -794,7 +805,9 @@ blockquote.alignright {
   background: #2b2f46;
   line-height: 0; }
   .site-header-image img {
-    width: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
     opacity: 0.6;
     -webkit-animation: header-image-pulse 20s ease-in-out infinite;
     -moz-animation: header-image-pulse 20s ease-in-out infinite;
@@ -809,18 +822,15 @@ blockquote.alignright {
     min-height: 100px; }
   @media (max-width: 480px) {
     .single .site-header-image {
-      text-align: center;
       height: 70vh; }
       .single .site-header-image img {
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        -o-transform: translateX(-50%);
-        transform: translateX(-50%);
-        height: 70vh;
+        margin-left: -40%;
+        min-width: 100%;
+        min-height: 100%;
         width: auto;
-        max-width: 500%; } }
+        height: auto;
+        max-height: 70vh;
+        max-width: 1000%; } }
 
 .site-content {
   padding: 0 1em;
@@ -834,7 +844,9 @@ blockquote.alignright {
   display: block; }
 
 .hentry {
-  margin: 0 0 1.5em; }
+  margin: 0 0 2.25em;
+  padding: 0 0 2.25em;
+  border-bottom: 4px solid #f3f3f4; }
 
 .byline,
 .updated:not(.published) {
@@ -847,7 +859,15 @@ blockquote.alignright {
 .page-content,
 .entry-content,
 .entry-summary {
-  margin: 1.5em 0 0; }
+  margin: 1.5em 0; }
+  .page-content p:first-child,
+  .entry-content p:first-child,
+  .entry-summary p:first-child {
+    margin-top: 0; }
+  .page-content p:last-child,
+  .entry-content p:last-child,
+  .entry-summary p:last-child {
+    margin-bottom: 0; }
 
 .page-links {
   clear: both;
@@ -860,16 +880,23 @@ blockquote.alignright {
     color: #43475b; }
     .entry-header .entry-title a:hover {
       color: #eb6e78; }
-.entry-header .entry-meta {
+
+.entry-header .entry-meta,
+.entry-footer {
   font-size: 0.6666666667em;
   text-transform: uppercase;
   letter-spacing: 0.0501777168em;
   color: #d0d1d6; }
-  .entry-header .entry-meta a {
+  .entry-header .entry-meta a,
+  .entry-footer a {
     text-decoration: none;
     color: #a1a3ad; }
-    .entry-header .entry-meta a:hover {
+    .entry-header .entry-meta a:hover,
+    .entry-footer a:hover {
       color: #eb6e78; }
+  .entry-header .entry-meta span,
+  .entry-footer span {
+    margin-right: 1em; }
 
 /*--------------------------------------------------------------
 ## Asides
@@ -903,11 +930,12 @@ blockquote.alignright {
     .site-footer .site-info li {
       display: inline-block;
       text-transform: uppercase;
-      font-size: 0.6666666667em;
+      font-size: 0.5715555556em;
       letter-spacing: 0.0501777168em;
       margin: 0 0.6666666667em; }
   .site-footer a {
-    color: #a1a3ad;
+    display: inline-block;
+    color: #b8bac1;
     text-decoration: none; }
     .site-footer a:hover {
       color: #eb6e78; }
@@ -932,7 +960,7 @@ blockquote.alignright {
     .sidebar {
       width: 50vw;
       right: -50vw; } }
-  @media (min-width: 1100px) {
+  @media (max-width: 1100px) {
     .sidebar {
       padding: 1em 1.5em; } }
   .sidebar .sidebar-inner {

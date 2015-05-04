@@ -1,5 +1,5 @@
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 ms(0) ms(0);
 }
 
 ul {
@@ -13,7 +13,7 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: ms(0);
 }
 
 dt {
@@ -21,5 +21,5 @@ dt {
 }
 
 dd {
-	margin: 0 1.5em 1.5em;
+	margin: 0 ms(0) ms(0);
 }

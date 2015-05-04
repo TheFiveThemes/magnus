@@ -11,12 +11,13 @@
         li {
             display: inline-block;
             text-transform: uppercase;
-            font-size: ms(-2);
+            font-size: ms(-3);
             letter-spacing: ms(-15);
             margin: 0 ms(-2);
         }
     }
     a {
+        display: inline-block;
         color: $color__footerlink;
         text-decoration: none;
         &:hover {
