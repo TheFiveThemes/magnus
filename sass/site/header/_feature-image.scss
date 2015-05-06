@@ -26,14 +26,10 @@
     .header-image & {
         max-height: 80vh;
         min-height: 100px;
-    }
-
-    .single & {
         @include respondTo(upto-small) {
             height: 70vh;
             img {
                 margin-left: -40%;
-
                 min-width: 100%;
                 min-height: 100%;
                 width: auto;

@@ -14,6 +14,7 @@
     list-style: none;
     margin: 0;
     padding-left: 0;
+    border-left: 4px solid $color__border-base;
 }
 
 .comment-list .children > li {
@@ -22,22 +23,28 @@
 
 
 // Comments
-
 .comment-body {
-    margin: 2.25em 0;
+    margin: ms(4) 0;
 }
 
 .comment-author .avatar {
     float: left;
     width: 32px;
     height: 32px;
-    margin: 0.2em 0.8em 0 0;
+    margin: 0 ms(-2) 0 0;
     border-radius: 100%;
 }
 
 .comment-metadata,
 .pingback .edit-link {
-    //@extend %heading4;
+    @include text-format(note);
+    a {
+        text-decoration: none;
+        color: $color__asidelink;
+        &:hover {
+            color: $color__asidelink-hover;
+        }
+    }
 }
 
 .comment-metadata {
@@ -50,7 +57,7 @@
 }
 
 .comment-list .reply a {
-    //@extend %heading4;
+    @include text-format(note);
 }
 
 .comment-content {
@@ -85,11 +92,19 @@
     
 }
 
+.comment-reply-title small {
+    @include text-format(note);
+}
+
 .comment-form label {
     display: block;
-    //@extend %heading3;
-    font-weight: bold;
-    padding: 0 0 0.5em;
+    
+    @extend %heading-base;
+    font-size: ms(-2);
+    letter-spacing: ms(-12);
+    color: $color__text-soft;
+
+    padding: 0 0 ms(-4);
 }
 
 .comment-form input[type="text"],
@@ -110,7 +125,18 @@
 .comment-awaiting-moderation,
 .logged-in-as,
 .form-allowed-tags {
-    //@extend %aside-text;
+    font-size: ms(-2);
+    letter-spacing: ms(-12);
+    //text-transform: uppercase;
+    //color: $color__text-soft;
+}
+
+.comment-form-comment {
+    margin-bottom: 0;
+}
+.form-allowed-tags {
+    margin-top: 0; 
+    margin-bottom: ms(4);
 }
 
 

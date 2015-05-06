@@ -15,6 +15,17 @@ body {
 	@include transition(all 0.2s ease-in-out);
 }
 
+::selection {/* WebKit/Blink Browsers */
+	background: $color__accent-tint10; 
+	color: $color__accent-tint90;
+	text-shadow: 0 1px 1px $color__accent-shade20;
+}
+::-moz-selection { /* Gecko Browsers */
+	background: $color__accent-tint10;
+	color: $color__accent-tint90;
+	text-shadow: 0 1px 1px $color__accent-shade20;
+}
+
 body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 }
@@ -31,8 +42,8 @@ blockquote, q {
 hr {
 	background-color: $color__background-hr;
 	border: 0;
-	height: 1px;
-	margin-bottom: 1.5em;
+	height: 4px;
+	margin-bottom: ms(0);
 }
 
 @import "lists";

@@ -1,10 +1,17 @@
-h1, h2, h3, h4, h5, h6 {
+%heading-base {
     font-family: $font__headings;
     font-size: ms(0);
-	clear: both;
+    clear: both;
     text-transform: uppercase;
     line-height: 1;
     color: $color__headings;
+    @include respondTo(upto-small) {
+        word-wrap: break-word;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @extend %heading-base;
     @include respondTo(upto-small) {
         word-wrap: break-word;
     }
@@ -32,12 +39,22 @@ h1, h2, h3, h4, h5, h6 {
         letter-spacing: ms(-12);
     }
 
+    h5 {
+        font-size: ms(-1);
+        letter-spacing: ms(-12);
+    }
+
+    h6 {
+        font-size: ms(-2);
+        letter-spacing: ms(-10);
+    }
+
     .sidebar-toggled & {
         @include respondTo(upto-large) {
             h1 {
                 font-size: ms(4);
             }
-            h2 {
+            h2 { 
                 font-size: ms(3);
             }
         }
@@ -56,4 +73,23 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.091em;
     text-transform: uppercase;
     line-height: 1;
+}
+
+
+// Text Format Mixin
+
+@mixin text-format($format) {
+  @if $format == note {
+    font-size: ms(-2);
+    text-transform: uppercase;
+    letter-spacing: ms(-15);
+    line-height: ms(2);
+  }
+  @else if $format == heading-small {
+    font-family: $font__headings;
+    font-size: ms(0);
+    clear: both;
+    text-transform: uppercase;
+    line-height: 1;
+  }
 }

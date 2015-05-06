@@ -10,6 +10,8 @@ textarea {
 
 	&:focus {
 		color: $color__text-input-focus;
+        outline: none;
+        box-shadow: 0 0 1px 4px $color__outilne-field-focus;
 	}
 }
 

@@ -1,7 +1,7 @@
 .site-footer {
-    border-top: 4px solid $color__base05;
-    padding: ms(0) 0 ms(1);
-    margin: ms(4) ms(0) 0;
+    padding: ms(0) ms(0) ms(1);
+    margin: ms(4) 0 0;
+    background: $color__background-footer;
     color: $color__base20;
     .site-info {
         list-style: none;

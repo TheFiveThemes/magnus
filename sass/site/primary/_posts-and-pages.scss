@@ -5,7 +5,7 @@
 .hentry {
 	margin: 0 0 ms(4);
     padding: 0 0 ms(4);
-    border-bottom: 4px solid $color__base05;
+    border-bottom: 4px solid $color__border-base;
 }
 
 .byline,
@@ -51,9 +51,7 @@
 
 .entry-header .entry-meta,
 .entry-footer {
-    font-size: ms(-2);
-    text-transform: uppercase;
-    letter-spacing: ms(-15);
+    @include text-format(note);
     color: $color__text-aside;
     a {
         text-decoration: none;
@@ -65,4 +63,28 @@
     span {
         margin-right: ms(0);
     }
+}
+
+
+.post-navigation {
+    margin: 0 0 ms(4);
+    padding: 0 0 ms(4);
+    border-bottom: 4px solid $color__border-base;
+
+    
+    // .nav-previous:before,
+    // .nav-next:before {
+    //     display: block;
+    //     @extend %heading-base;
+    //     font-size: ms(-2);
+    //     letter-spacing: ms(-12);
+
+    //     color: $color__text-soft;
+    // }
+    // .nav-previous:before {
+    //     content: "Previously";
+    // }
+    // .nav-next:before {
+    //     content: "Up Next";
+    // }
 }
