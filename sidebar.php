@@ -11,7 +11,7 @@ if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) || is_active_sidebar(
 
         <?php if ( has_nav_menu( 'primary' ) ) : ?>
             <nav class="main-navigation" role="navigation">
-                <h2 class="menu-heading widget-title"><?php _e( 'Menu', 'magnus' ); ?></h2>
+                <h2 class="menu-heading widget-title"><?php _e( 'Navigation', 'magnus' ); ?></h2>
                 <?php
                     // Primary navigation menu.
                     wp_nav_menu( array(

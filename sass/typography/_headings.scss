@@ -10,6 +10,26 @@
     }
 }
 
+// Text Format Mixin
+
+@mixin text-format($format) {
+  @if $format == note {
+    font-size: ms(-2);
+    text-transform: uppercase;
+    letter-spacing: ms(-15);
+    line-height: ms(2);
+  }
+  @else if $format == heading-small {
+    font-family: $font__headings;
+    font-size: ms(0);
+    clear: both;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+}
+
+// Implementations
+
 h1, h2, h3, h4, h5, h6 {
     @extend %heading-base;
     @include respondTo(upto-small) {
@@ -21,18 +41,21 @@ h1, h2, h3, h4, h5, h6 {
     h1 {
         font-size: ms(5);
         @include respondTo(upto-small) {
-            font-size: ms(4);
+            font-size: ms(3);
         }
     }
     h2 {
         font-size: ms(4);
         @include respondTo(upto-small) {
-            font-size: ms(3);
+            font-size: ms(2);
         }
     }
     h3 {
         font-size: ms(2);
         letter-spacing: ms(-15);
+        @include respondTo(upto-small) {
+            font-size: ms(1);
+        }
     }
     h4 {
         font-size: ms(0);
@@ -61,6 +84,14 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.sidebar {
+    h2 {
+        color: $color__text-sidebar;
+    }
+}
+
+
+
 %heading3 {
     font-size: ms(0);
     letter-spacing: 0.081em;
@@ -76,20 +107,3 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-// Text Format Mixin
-
-@mixin text-format($format) {
-  @if $format == note {
-    font-size: ms(-2);
-    text-transform: uppercase;
-    letter-spacing: ms(-15);
-    line-height: ms(2);
-  }
-  @else if $format == heading-small {
-    font-family: $font__headings;
-    font-size: ms(0);
-    clear: both;
-    text-transform: uppercase;
-    line-height: 1;
-  }
-}

@@ -12,12 +12,16 @@ $color__base10: tint($color__base,90%);
 $color__base05: tint($color__base,95%);
 
 $color__base-tint10: tint($color__base,10%);
+$color__base-tint15: tint($color__base,15%);
 $color__base-tint20: tint($color__base,20%);
+$color__base-tint30: tint($color__base,30%);
 $color__base-tint40: tint($color__base,40%);
 $color__base-tint60: tint($color__base,60%);
 $color__base-tint80: tint($color__base,80%);
 $color__base-tint90: tint($color__base,90%);
 $color__base-tint95: tint($color__base,95%);
+
+$color__base-shade10: shade($color__base,10%);
 
 
 $color__accent: #eb6e78;
@@ -52,9 +56,9 @@ $color__background-screen: #f1f1f1;
 $color__background-hr: $color__base05;
 $color__background-pre: $color__base05;
 $color__background-ins: #fff9c0;
-$color__background-header: $color__base80;
+$color__background-header: $color__base-tint15;
 $color__background-feature: $color__base90;
-$color__background-drawer: $color__base70;
+$color__background-drawer: $color__base-tint20;
 $color__background-footer: $color__base05;
 
 // Text
@@ -67,13 +71,18 @@ $color__text-main: $color__base60;
 $color__text-aside: $color__base20;
 $color__headings: $color__base80;
 $color__text-soft: $color__base-tint80;
-$color__text-sidebar: $color__base20;
+$color__text-sidebar: $color__base-tint60;
+$color__text-shadow-sidebar: $color__base-tint20;
+
 
 // Links
 
 $color__link: $color__accent;
 $color__link-visited: $color__accent90;
 $color__link-hover: $color__base80;
+
+$color__link-sidebar: $color__base-tint90;
+$color__link-sidebar-hover: $color__accent;
 
 $color__titlelink: $color__base80;
 $color__titlelink-hover: $color__accent;
