@@ -11,6 +11,8 @@
 	margin-right: auto;
 }
 
+
+
 // Clearfix
 @mixin clearfix() {
 	content: "";
@@ -23,25 +25,10 @@
 }
 
 
-// Breakpoints for each query
-$smartphone: 480px;
-$tablet: 800px;
-$desktop: 1100px;
 
-@mixin respondTo($media) {
-  @if $media == upto-small {
-    @media (max-width: $smartphone) { @content; }
-  }
-  @if $media == upto-medium {
-    @media (max-width: $tablet) { @content; }
-  }
-  @else if $media == atleast-medium {
-    @media (min-width: $tablet) { @content; }
-  }
-  @else if $media == upto-large {
-    @media (max-width: $desktop) { @content; }
-  }
-  @else if $media == atleast-large {
-    @media (min-width: $desktop) { @content; }
-  }
-}
+// Media Query Breakpoints Mixin
+@import "breakpoints";
+
+
+// Text Format Mixin
+@import "text-format";

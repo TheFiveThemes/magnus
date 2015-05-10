@@ -1,6 +1,7 @@
 .site-header .main-navigation {
+	position: absolute;
 	display: block;
-	float: right;
+	right: 0;
 	width: 70%;
 	text-align: right;
 	font-family: $font__headings;
@@ -29,10 +30,11 @@
 
     .menu-header-container {
     	position: relative;
-    	width: calc(100% - ms(6));
-    	right: ms(5);
+    	right: ms(6);
     	opacity: 1;
-    	z-index: 100;
+    	z-index: 200;
+
+    	@include transition(all 0.5s ease-in-out 0.2s);
 
 	    ul { // Parent list Globals
 			list-style: none;
@@ -62,8 +64,11 @@
 		}
 
 		.sidebar-toggled & {
-			opacity: 0;
-		}
+	    	opacity: 0;	    	
+			z-index: 0;
+
+	    	@include transition(all 0.5s ease-in-out);
+	    }
 
 		@include respondTo(upto-medium) {
 	        display: none;
@@ -92,16 +97,14 @@
 	padding: 0;
 	outline: 0;
 	font-size: 1em;
-	
 	background: transparent;
-	//background: rgba(yellow,.5);
 	
 	position: absolute;
 	top: 0;
 	right: 0;
-	margin: ms(-12) 0 0;
-	padding: (ms(0)+0.2em) ms(0) ms(2);
-	z-index: 200;
+	margin: -(ms(0)) 0 0;
+	padding: ms(1) ms(0) ms(2);
+	z-index: 100;
 
 	%hamburger-bars {
 		display: block;
@@ -115,6 +118,7 @@
 	span {  // Hamburger bars
 		@extend %hamburger-bars;
 		text-indent: -9999px;
+		@include transition(all 0.5s ease-in-out);
 
 		&:before, 
 		&:after {
@@ -122,7 +126,8 @@
 			@extend %hamburger-bars;
 			position: absolute;
 			@include transform(rotate(0deg));
-			top: (ms(0) + 0.2em);
+			top: ms(1);
+			@include transition(all 0.5s ease-in-out);
 		}
 		&:before {
 			margin-top: -8px;
@@ -142,9 +147,11 @@
 		border: 0 none;
 		
 		span {
+			@include transition(all 0.15s ease-in-out);
 			background: $color__headernavlink-hover;
 			&:before,
 			&:after {
+				@include transition(all 0.15s ease-in-out);
 				width: ms(2);
 				background: $color__headernavlink-hover;
 			}
@@ -160,12 +167,13 @@
 	// When Sidebar is visible:
 	.sidebar-toggled & {
 		position: fixed;
-		right: 0;
+		top: 0;
+		margin-top: 0;
 		z-index: 9999;
 		border: 0 none;		
-		background: rgba($color__background-drawer,.8);
-		box-shadow: 0 0 30px 20px rgba($color__background-drawer,.7);
-		border-radius: 50%;
+		background: rgba($color__background-drawer,.5);
+		border-radius: 0px 0px 0px 30%;
+		@include transition(all 0.2s ease-in-out);
         span {
         	background: transparent;
         	&:before,
@@ -188,6 +196,7 @@
         &:hover {
 			@include transform(scale(1.1));
     		@include transform-origin(center);
+			@include transition(all 0.15s ease-in-out);
     		span {
     			&:before,
 				&:after {
@@ -199,6 +208,8 @@
 }
 
 
+
+// Contents of sidebar drawer
 .sidebar {
 	.main-navigation {
         padding-bottom: ms(4);
@@ -226,7 +237,7 @@
         }
         a {
         	display: block;
-        	padding: ms(2) 0;
+        	padding: ms(0) 0;
         	font-size: ms(-1);
         }
     }

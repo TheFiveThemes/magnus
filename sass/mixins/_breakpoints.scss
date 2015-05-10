@@ -1,0 +1,35 @@
+// Breakpoints for each query
+$narrow: 480px;
+$medium: 800px;
+$wide: 1100px;
+$extra-wide: 1400px;
+$ultra-wide: 1600px;
+
+@mixin respondTo($media) {
+
+  @if $media == upto-narrow {
+    @media (max-width: $narrow) { @content; }
+  }
+
+  @else if $media == upto-medium {
+    @media (max-width: $medium) { @content; }
+  }
+  @else if $media == atleast-medium {
+    @media (min-width: $medium) { @content; }
+  }
+
+  @else if $media == upto-wide {
+    @media (max-width: $wide) { @content; }
+  }
+  @else if $media == atleast-wide {
+    @media (min-width: $wide) { @content; }
+  }
+
+  @else if $media == atleast-extra-wide {
+    @media (min-width: $extra-wide) { @content; }
+  }
+
+  @else if $media == atleast-ultra-wide {
+    @media (min-width: $ultra-wide) { @content; }
+  }
+}

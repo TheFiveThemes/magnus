@@ -13,6 +13,8 @@
     padding: ms(0) ms(6) ms(0) ms(2);
     color: white;
 
+    @include transition(all 0.5s ease-in-out);
+
     .admin-bar & {
         padding-top: ms(4);
     }
@@ -22,7 +24,7 @@
         right: -50vw;
     }
 
-    @include respondTo(upto-large) {
+    @include respondTo(upto-wide) {
         padding: ms(0) ms(2);
     }
 
@@ -54,9 +56,11 @@
 .sidebar-toggled {
     .sidebar {
         right: 0;
+        @include transition(all 0.5s ease-in-out);
     }
     .site {
         margin-left: -100vw;
+        @include transition(all 0.5s ease-in-out);
         @include respondTo(atleast-medium) {
             width: 50vw;
             margin-left: 0;

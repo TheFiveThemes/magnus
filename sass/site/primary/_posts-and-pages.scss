@@ -54,7 +54,7 @@
 .entry-header .entry-meta,
 .entry-footer {
     @include text-format(note);
-    color: $color__text-aside;
+    color: $color__text-softer;
     a {
         text-decoration: none;
         color: $color__asidelink;
@@ -85,7 +85,7 @@
     //     font-size: ms(-2);
     //     letter-spacing: ms(-12);
 
-    //     color: $color__text-soft;
+    //     color: $color__text-softer;
     // }
     // .nav-previous:before {
     //     content: "Previously";

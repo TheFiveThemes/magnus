@@ -251,6 +251,12 @@ form input[type="submit"], .comment-form label {
     form input[type="reset"],
     form input[type="submit"], .comment-form label {
       word-wrap: break-word; } }
+  @media (min-width: 1600px) {
+    h1, h2, h3, h4, h5, h6, form button,
+    form input[type="button"],
+    form input[type="reset"],
+    form input[type="submit"], .comment-form label {
+      font-size: 1.5em; } }
 
 @media (max-width: 480px) {
   h1, h2, h3, h4, h5, h6 {
@@ -353,10 +359,7 @@ body {
 *:before,
 *:after {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-  box-sizing: inherit;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
+  box-sizing: inherit; }
 
 ::selection {
   /* WebKit/Blink Browsers */
@@ -431,7 +434,10 @@ form input[type="submit"] {
   border-color: #eb6e78 #d3636c #bc5860;
   border-radius: 3px;
   background: #eb6e78;
-  padding: 0.8573333333em 1.286em; }
+  padding: 0.8573333333em 1.286em;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
   form button:hover,
   form input[type="button"]:hover,
   form input[type="reset"]:hover,
@@ -439,7 +445,10 @@ form input[type="submit"] {
     background: #ef8b93;
     border-color: #ef8b93 #ed7c85 #d3636c;
     color: #fff;
-    text-shadow: 0 1px 1px #bc5860; }
+    text-shadow: 0 1px 1px #bc5860;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out; }
   form button:active,
   form input[type="button"]:active,
   form input[type="reset"]:active,
@@ -452,7 +461,10 @@ form input[type="submit"] {
   form input[type="reset"]:focus,
   form input[type="submit"]:focus {
     outline: none;
-    box-shadow: 0 0 1px 4px #fbe2e4; }
+    box-shadow: 0 0 1px 4px #f7c5c9;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out; }
 
 input[type="text"],
 input[type="email"],
@@ -462,7 +474,10 @@ input[type="search"],
 textarea {
   color: #727584;
   border: 1px solid #d0d1d6;
-  border-radius: 3px; }
+  border-radius: 3px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="url"]:focus,
@@ -471,17 +486,20 @@ textarea {
   textarea:focus {
     color: #43475b;
     outline: none;
-    box-shadow: 0 0 1px 4px #e7e8ea; }
+    box-shadow: 0 0 1px 4px #e7e8ea;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out; }
 
 input[type="text"],
 input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-  padding: 3px; }
+  padding: 0.2962962963em 0.4444444444em; }
 
 textarea {
-  padding-left: 3px;
+  padding: 0.2962962963em 0.4444444444em;
   width: 100%; }
 
 .post-password-form {
@@ -516,25 +534,32 @@ textarea {
 # Navigation
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-5.1 Links
+## Links
 --------------------------------------------------------------*/
 a {
-  color: #eb6e78; }
+  color: #eb6e78;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
   a:visited {
     color: #ed7c85; }
   a:hover, a:focus, a:active {
-    color: #43475b; }
+    color: #43475b;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
     outline: 0; }
 
 /*--------------------------------------------------------------
-5.2 Menus
+## Menus
 --------------------------------------------------------------*/
 .site-header .main-navigation {
+  position: absolute;
   display: block;
-  float: right;
+  right: 0;
   width: 70%;
   text-align: right;
   font-family: "Montserrat", sans-serif;
@@ -556,10 +581,12 @@ a {
       color: #fff; }
   .site-header .main-navigation .menu-header-container {
     position: relative;
-    width: calc(100% - ms(6));
-    right: 2.8935em;
+    right: 3.375em;
     opacity: 1;
-    z-index: 100; }
+    z-index: 200;
+    -webkit-transition: all 0.5s ease-in-out 0.2s;
+    -moz-transition: all 0.5s ease-in-out 0.2s;
+    transition: all 0.5s ease-in-out 0.2s; }
     .site-header .main-navigation .menu-header-container ul {
       list-style: none;
       margin: 0;
@@ -580,7 +607,11 @@ a {
         .site-header .main-navigation .menu-header-container ul li a {
           padding: 0 0 1em 0.4444444444em; }
     .sidebar-toggled .site-header .main-navigation .menu-header-container {
-      opacity: 0; }
+      opacity: 0;
+      z-index: 0;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
     @media (max-width: 800px) {
       .site-header .main-navigation .menu-header-container {
         display: none; } }
@@ -606,9 +637,9 @@ a {
   position: absolute;
   top: 0;
   right: 0;
-  margin: 0.0877914952em 0 0;
-  padding: 1.2em 1em 1.5em;
-  z-index: 200; }
+  margin: -1em 0 0;
+  padding: 1.286em 1em 1.5em;
+  z-index: 100; }
   .sidebar-toggle span, .sidebar-toggle span:before, .sidebar-toggle span:after {
     display: block;
     width: 1.5em;
@@ -617,7 +648,10 @@ a {
     line-height: 1;
     background: rgba(231, 232, 234, 0.7); }
   .sidebar-toggle span {
-    text-indent: -9999px; }
+    text-indent: -9999px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
     .sidebar-toggle span:before, .sidebar-toggle span:after {
       content: '';
       position: absolute;
@@ -626,7 +660,10 @@ a {
       -ms-transform: rotate(0deg);
       -o-transform: rotate(0deg);
       transform: rotate(0deg);
-      top: 1.2em; }
+      top: 1.286em;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; }
     .sidebar-toggle span:before {
       margin-top: -8px;
       width: 1.286em; }
@@ -638,20 +675,29 @@ a {
     text-shadow: 0 0 0 transparent;
     border: 0 none; }
     .sidebar-toggle:hover span {
+      -webkit-transition: all 0.15s ease-in-out;
+      -moz-transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease-in-out;
       background: #fff; }
       .sidebar-toggle:hover span:before, .sidebar-toggle:hover span:after {
+        -webkit-transition: all 0.15s ease-in-out;
+        -moz-transition: all 0.15s ease-in-out;
+        transition: all 0.15s ease-in-out;
         width: 1.5em;
         background: #fff; }
   .sidebar-toggle:active, .sidebar-toggle:visited, .sidebar-toggle:focus {
     box-shadow: 0 0 0 transparent; }
   .sidebar-toggled .sidebar-toggle {
     position: fixed;
-    right: 0;
+    top: 0;
+    margin-top: 0;
     z-index: 9999;
     border: 0 none;
-    background: rgba(67, 71, 91, 0.8);
-    box-shadow: 0 0 30px 20px rgba(67, 71, 91, 0.7);
-    border-radius: 50%; }
+    background: rgba(67, 71, 91, 0.5);
+    border-radius: 0px 0px 0px 30%;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
     .sidebar-toggled .sidebar-toggle span {
       background: transparent; }
       .sidebar-toggled .sidebar-toggle span:before, .sidebar-toggled .sidebar-toggle span:after {
@@ -689,7 +735,10 @@ a {
       -moz-transform-origin: center;
       -ms-transform-origin: center;
       -o-transform-origin: center;
-      transform-origin: center; }
+      transform-origin: center;
+      -webkit-transition: all 0.15s ease-in-out;
+      -moz-transition: all 0.15s ease-in-out;
+      transition: all 0.15s ease-in-out; }
       .sidebar-toggled .sidebar-toggle:hover span:before, .sidebar-toggled .sidebar-toggle:hover span:after {
         background: white; }
 
@@ -715,7 +764,7 @@ a {
     padding: 0; }
   .sidebar .main-navigation a {
     display: block;
-    padding: 1.5em 0;
+    padding: 1em 0;
     font-size: 0.8573333333em; }
 
 .site-main .comment-navigation, .site-main
@@ -746,7 +795,7 @@ a {
   width: 1px;
   overflow: hidden; }
   .screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
-    background-color: #f1f1f1;
+    background-color: #f3f3f4;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
@@ -821,7 +870,10 @@ blockquote.alignright {
 --------------------------------------------------------------*/
 .site {
   position: relative;
-  width: 100vw; }
+  width: 100vw;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
 
 /*--------------------------------------------------------------
 ## Header
@@ -844,7 +896,10 @@ blockquote.alignright {
   width: 30%;
   float: left;
   color: #fff;
-  z-index: 9000; }
+  z-index: 9000;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
   .site-branding h1 {
     font-size: 0.6666666667em;
     letter-spacing: 0.1316872428em;
@@ -865,7 +920,15 @@ blockquote.alignright {
     color: rgba(255, 255, 255, 0.6); }
   @media (max-width: 800px) {
     .site-branding {
-      width: 80%; } }
+      width: 80%;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out; } }
+  .sidebar-toggled .site-branding {
+    width: 100%;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
 
 /*--------------------------------------------------------------
 ## Header Feature Image
@@ -904,9 +967,9 @@ blockquote.alignright {
     width: auto;
     height: auto;
     opacity: 0.6;
-    -webkit-animation: header-image-pulse 20s ease-in-out infinite;
-    -moz-animation: header-image-pulse 20s ease-in-out infinite;
-    animation: header-image-pulse 20s ease-in-out infinite;
+    -webkit-animation: header-image-pulse 25s ease-in-out infinite;
+    -moz-animation: header-image-pulse 25s ease-in-out infinite;
+    animation: header-image-pulse 25s ease-in-out infinite;
     -webkit-transform-origin: bottom center;
     -moz-transform-origin: bottom center;
     -ms-transform-origin: bottom center;
@@ -927,10 +990,15 @@ blockquote.alignright {
           max-height: 70vh;
           max-width: 1000%; } }
 
-.site-content {
+.content-area {
   padding: 0 1em;
   margin: 0 auto;
   max-width: 38.443359375em; }
+  @media (min-width: 1400px) {
+    .content-area {
+      font-size: 1.286em; }
+      .content-area.sidebar-toggled {
+        font-size: 1em; } }
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -1015,7 +1083,7 @@ blockquote.alignright {
 ## Comments
 --------------------------------------------------------------*/
 .comments-area {
-  margin: 5.063em 0; }
+  margin: 5.0625em 0 2.25em; }
 
 .comment-list {
   margin: 0 0 2.25em;
@@ -1186,7 +1254,10 @@ blockquote.alignright {
   z-index: 9000;
   background: #43475b;
   padding: 1em 3.375em 1em 1.5em;
-  color: white; }
+  color: white;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
   .admin-bar .sidebar {
     padding-top: 2.25em; }
   @media (min-width: 800px) {
@@ -1213,9 +1284,15 @@ blockquote.alignright {
       color: #eb6e78; }
 
 .sidebar-toggled .sidebar {
-  right: 0; }
+  right: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
 .sidebar-toggled .site {
-  margin-left: -100vw; }
+  margin-left: -100vw;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
   @media (min-width: 800px) {
     .sidebar-toggled .site {
       width: 50vw;

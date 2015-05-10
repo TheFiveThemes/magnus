@@ -22,6 +22,8 @@
     color: #fff;
     z-index: 9000;
 
+    @include transition(all 0.5s ease-in-out);
+
     h1 {
         font-size: ms(-2);
         letter-spacing: ms(-10);
@@ -48,5 +50,11 @@
 
     @include respondTo(upto-medium) {
         width: 80%;
+        @include transition(all 0.5s ease-in-out);
+    }
+
+    .sidebar-toggled & {
+        width: 100%;
+        @include transition(all 0.5s ease-in-out);
     }
 }

@@ -1,6 +1,8 @@
 .site {
     position: relative;
     width: 100vw;
+
+    @include transition(all 0.5s ease-in-out);
 }
 
 /*--------------------------------------------------------------
@@ -13,10 +15,16 @@
 --------------------------------------------------------------*/
 @import "header/feature-image";
 
-.site-content {
+.content-area {
     padding: 0 ms(0);
     margin: 0 auto;
-    max-width: ms(18); 
+    max-width: ms(18);
+    @include respondTo(atleast-extra-wide) {
+        font-size: ms(1);
+        &.sidebar-toggled {
+            font-size: ms(0);
+        }
+    }
 }
 
 /*--------------------------------------------------------------

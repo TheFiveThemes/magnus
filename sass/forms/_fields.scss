@@ -7,11 +7,12 @@ textarea {
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
 	border-radius: 3px;
-
+	@include transition(all 0.5s ease-in-out);
 	&:focus {
 		color: $color__text-input-focus;
         outline: none;
         box-shadow: 0 0 1px 4px $color__outilne-field-focus;
+        @include transition(all 0.15s ease-in-out);
 	}
 }
 
@@ -20,10 +21,10 @@ input[type="email"],
 input[type="url"],
 input[type="password"],
 input[type="search"] {
-	padding: 3px;
+	padding: ms(-6) ms(-4);
 }
 
 textarea {
-	padding-left: 3px;
+	padding: ms(-6) ms(-4);
 	width: 100%;
 }

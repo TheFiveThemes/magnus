@@ -8,6 +8,7 @@ a {
 	&:focus,
 	&:active {
 		color: $color__link-hover;
+		@include transition(all 0.15s ease-in-out);
 	}
 	&:focus {
 		outline: thin dotted;
@@ -16,4 +17,6 @@ a {
 	&:active {
 		outline: 0;
 	}
+
+	@include transition(all 0.5s ease-in-out);
 }
