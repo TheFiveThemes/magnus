@@ -484,6 +484,34 @@ textarea {
   padding-left: 3px;
   width: 100%; }
 
+.post-password-form {
+  background: #f3f3f4;
+  padding: 3.375em 2.25em; }
+  .post-password-form p {
+    max-width: 300px;
+    margin-right: auto;
+    margin-left: auto; }
+  .post-password-form p:first-child {
+    font-size: 0.6666666667em;
+    text-transform: uppercase;
+    letter-spacing: 0.0501777168em;
+    line-height: 1.5em;
+    text-transform: none; }
+  .post-password-form label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    clear: both;
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: 0.6666666667em;
+    color: #d0d1d6; }
+  .post-password-form input[type="password"] {
+    display: block;
+    margin-bottom: 0.6666666667em;
+    width: 100%; }
+  .post-password-form input[type="submit"] {
+    display: block; }
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -872,6 +900,7 @@ blockquote.alignright {
   line-height: 0; }
   .site-header-image img {
     max-width: 100%;
+    min-width: 100%;
     width: auto;
     height: auto;
     opacity: 0.6;
@@ -940,6 +969,8 @@ blockquote.alignright {
   margin: 0 0 1.5em; }
 
 .entry-header .entry-title {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
   margin-bottom: 0.2962962963em; }
   .entry-header .entry-title a {
     text-decoration: none;
@@ -1103,6 +1134,17 @@ blockquote.alignright {
 .required {
   color: #eb6e78; }
 
+.no-comments {
+  font-size: 0.6666666667em;
+  text-transform: uppercase;
+  letter-spacing: 0.0501777168em;
+  line-height: 1.5em;
+  text-align: center;
+  color: #d0d1d6;
+  border-top: 4px solid #f3f3f4;
+  border-bottom: 4px solid #f3f3f4;
+  padding: 1em 0; }
+
 /*--------------------------------------------------------------
 ## Footer
 --------------------------------------------------------------*/
@@ -1234,16 +1276,21 @@ figure {
 12.1 Captions
 --------------------------------------------------------------*/
 .wp-caption {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
   max-width: 100%; }
   .wp-caption img[class*="wp-image-"] {
     display: block;
     margin-left: auto;
     margin-right: auto; }
   .wp-caption .wp-caption-text {
-    margin: 0.8075em 0; }
+    margin: 0.4444444444em 0; }
 
 .wp-caption-text {
+  font-size: 0.6666666667em;
+  text-transform: uppercase;
+  letter-spacing: 0.0501777168em;
+  line-height: 1.5em;
+  text-transform: none;
   text-align: center; }
 
 /*--------------------------------------------------------------

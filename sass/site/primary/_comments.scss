@@ -152,3 +152,12 @@
 .required {
     color: $color__accent;
 }
+
+.no-comments {
+    @include text-format(note);
+    text-align: center;
+    color: $color__text-aside;
+    border-top: 4px solid $color__border-base;
+    border-bottom: 4px solid $color__border-base;
+    padding: ms(0) 0;
+}

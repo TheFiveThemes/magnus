@@ -1,5 +1,5 @@
 .wp-caption {
-	margin-bottom: 1.5em;
+	margin-bottom: ms(0);
 	max-width: 100%;
 
 	img[class*="wp-image-"] {
@@ -7,10 +7,13 @@
 	}
 
 	.wp-caption-text {
-		margin: 0.8075em 0;
+		margin: ms(-4) 0;
 	}
 }
 
 .wp-caption-text {
+	@include text-format(note);
+    text-transform: none;
+
 	text-align: center;
 }
