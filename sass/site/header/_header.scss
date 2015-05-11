@@ -12,7 +12,11 @@
         position: absolute;
         background: transparent;
         margin-bottom: 0;
-    }  
+    }
+
+    .blog.home & {
+        //background: transparent;
+    }
 }
 
 .site-branding {

@@ -35,6 +35,10 @@ function magnus_body_classes( $classes ) {
     	$classes[] = 'header-image';
     }
 
+    if (is_home()) {
+    	$classes[] = 'fullpage-panels';
+    }
+
 	return $classes;
 }
 add_filter( 'body_class', 'magnus_body_classes' );

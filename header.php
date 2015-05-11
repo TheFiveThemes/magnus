@@ -43,6 +43,7 @@
 
 	</header><!-- #masthead -->
 	
+	<?php if (!is_home()) : ?>
 	<section class="site-header-image">
 		<?php // Check if this is a post or page, if it has a thumbnail, and if it's a big one
 		if ( is_singular() && has_post_thumbnail( $post->ID ) ) :
@@ -52,5 +53,6 @@
 			<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
 		<?php endif; // end check for featured image or standard header ?>
 	</section><!-- .site-header-image -->
+	<?php endif; // end check for blog homepage ?>
 
 	<section id="content" class="site-content">

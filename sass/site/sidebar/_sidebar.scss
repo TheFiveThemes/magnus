@@ -1,9 +1,9 @@
 .sidebar {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     top: 0;
-    right: -100vw;
+    right: -100%;
     left: auto;
     overflow: scroll;
     overflow-x: hidden;
@@ -13,15 +13,15 @@
     padding: ms(0) ms(6) ms(0) ms(2);
     color: white;
 
-    @include transition(all 0.5s ease-in-out);
+    @include transition(all 0.5s ease-in); //controls closing animation
 
     .admin-bar & {
         padding-top: ms(4);
     }
 
     @include respondTo(atleast-medium) {
-        width: 50vw;
-        right: -50vw;
+        width: 50%;
+        right: -50%;
     }
 
     @include respondTo(upto-wide) {
@@ -56,14 +56,12 @@
 .sidebar-toggled {
     .sidebar {
         right: 0;
-        @include transition(all 0.5s ease-in-out);
+        @include transition(all 0.5s ease-out); //controls opening animation
     }
     .site {
-        margin-left: -100vw;
         @include transition(all 0.5s ease-in-out);
         @include respondTo(atleast-medium) {
-            width: 50vw;
-            margin-left: 0;
+            width: 50%;
         }
     }
 }

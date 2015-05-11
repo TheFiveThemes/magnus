@@ -1,0 +1,14 @@
+@include keyframes(header-image-pulse) {
+  0%, 100% {
+    @include transform(scale(1));
+  }
+  50% {
+    @include transform(scale(1.1));
+  }
+}
+
+.blog.home .site-main article {
+
+    //background: $color__background-feature;
+
+}
