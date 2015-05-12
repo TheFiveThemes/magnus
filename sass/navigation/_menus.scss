@@ -15,10 +15,12 @@
 	text-transform: uppercase;
 	letter-spacing: ms(-10);
 	line-height: 1;
+    opacity: 1;
 
 	@include respondTo(upto-medium) {
         width: 20%;
     }
+
 
     // Navigation
 
@@ -40,7 +42,9 @@
     	opacity: 1;
     	z-index: 200;
 
-    	@include transition(all 0.5s ease-in-out 0.2s);
+        @include transition-property(opacity);
+        @include transition-duration(0.2s);
+        @include transition-timing-function(ease-in-out);
 
 	    ul { // Parent list Globals
 			list-style: none;
@@ -71,9 +75,10 @@
 
 		.sidebar-toggled & {
 	    	opacity: 0;	    	
-			z-index: 0;
-
-	    	@include transition(all 0.5s ease-in-out);
+			//right: -50vw;
+            @include transition-property(opacity);
+            @include transition-duration(0.5s);
+            @include transition-timing-function(ease-in-out);
 	    }
 
 		@include respondTo(upto-medium) {
@@ -133,11 +138,6 @@
 
 
 
-
-
-
-
-
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
@@ -146,16 +146,21 @@
 		margin: 0 0 1.5em;
 		overflow: hidden;
 	}
-
+    & .nav-previous,
+    & .nav-next {
+        width: 50%;
+        a {
+            display: inline-block;
+            text-decoration: none;
+            @include text-format(heading-small);
+        }
+    }
 	& .nav-previous {
 		float: left;
-		width: 50%;
 	}
-
 	& .nav-next {
 		float: right;
 		text-align: right;
-		width: 50%;
 	}
 }
 

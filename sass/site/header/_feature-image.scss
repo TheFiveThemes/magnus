@@ -38,8 +38,11 @@
 
     .featured-image &,
     .header-image & {
-        max-height: 80vh;
+        max-height: 70vh;
         min-height: 100px;
+    }
+
+    .featured-image & {
         @include respondTo(upto-narrow) {
             height: 70vh;
             img {
@@ -49,7 +52,6 @@
                 display: block;
             }
         }
-
         @include respondTo(atleast-wide) {
             height: 80vh;
             img {

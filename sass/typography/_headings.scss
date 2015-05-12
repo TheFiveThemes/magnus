@@ -58,13 +58,21 @@ h1, h2, h3, h4, h5, h6 {
     }
 
     .sidebar-toggled & {
-        @include respondTo(upto-wide) {
+        @include respondTo(atleast-medium) {
             h1 {
                 font-size: ms(4);
+                @include transition(font-size 0.2s ease-in-out);
             }
             h2 { 
                 font-size: ms(3);
+                @include transition(font-size 0.2s ease-in-out);
             }
+        }
+    }
+
+    @include respondTo(atleast-wide) {
+        h1, h2 {
+            @include transition(font-size 0.2s ease-in-out);
         }
     }
 }

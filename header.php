@@ -61,7 +61,6 @@
 			// Houston, we have a new header image!
 			echo get_the_post_thumbnail( $post->ID, 'magnus-large' );
 
-
 			$image_id = get_post_thumbnail_id();
 			$url = wp_get_attachment_image_src( $image_id, 'magnus-large' ); ?>
 
