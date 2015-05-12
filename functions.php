@@ -179,9 +179,9 @@ function magnus_scripts() {
 		wp_enqueue_script( 'magnus-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20150302' );
 	}
 
-    // If is front page or archive, load the fullscreen script
-    if ( is_front_page() || is_archive() ) {
-        wp_enqueue_script( 'magnus-fullscreen', get_template_directory_uri() . '/js/jquery.fullPage.min.js', array( 'jquery' ) );
+    // If is home, load the fullscreen script
+    if ( is_home() ) {
+        wp_enqueue_script( 'magnus-fullscreen', get_template_directory_uri() . '/js/jquery.fullPage.js', array( 'jquery' ) );
     }
 
 	// Javacript functions in Magnus.

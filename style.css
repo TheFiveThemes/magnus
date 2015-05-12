@@ -955,7 +955,7 @@ blockquote.alignright {
   padding: 1em 1em 1.286em;
   margin-bottom: 2.25em;
   background: #373b50; }
-  .featured-image .site-header, .header-image .site-header, .blog.home .site-header {
+  .featured-image .site-header, .header-image .site-header, .blog.home .site-header, .error404 .site-header {
     position: absolute;
     background: transparent;
     margin-bottom: 0; }
@@ -1231,6 +1231,26 @@ blockquote.alignright {
           color: #eb6e78; }
 
 /*--------------------------------------------------------------
+## Archive
+--------------------------------------------------------------*/
+.archive .page-header {
+  padding: 2.25em 1em 4.34025em;
+  margin: 0 0 2.25em;
+  border-bottom: 4px solid #f3f3f4;
+  text-align: center;
+  color: #a1a3ad; }
+  .archive .page-header .page-title {
+    font-size: 2.25em;
+    color: #d0d1d6;
+    margin: 0; }
+  .archive .page-header .page-description {
+    font-style: italic;
+    font-size: 0.6666666667em;
+    letter-spacing: 0.0501777168em; }
+    .archive .page-header .page-description p {
+      margin: 0.4444444444em 0 0; }
+
+/*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
 .blog .format-aside .entry-title,
@@ -1396,6 +1416,72 @@ blockquote.alignright {
     text-decoration: none; }
     .site-footer a:hover {
       color: #eb6e78; }
+
+/*--------------------------------------------------------------
+## 404
+--------------------------------------------------------------*/
+.error404 {
+  background: #eb6e78; }
+  .error404 .site-main {
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    padding: 5.0625em 0 0; }
+  .error404 .not-found {
+    position: absolute;
+    top: 45%;
+    -webkit-transform: translateY(-45%);
+    -moz-transform: translateY(-45%);
+    -ms-transform: translateY(-45%);
+    -o-transform: translateY(-45%);
+    transform: translateY(-45%);
+    width: 100vw; }
+    .error404 .not-found .page-header,
+    .error404 .not-found .page-content {
+      padding: 0 1em;
+      margin: 0 auto;
+      max-width: 38.443359375em;
+      color: white; }
+  .error404 article {
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border-bottom: 0;
+    background: #101428;
+    overflow: hidden; }
+    .error404 article:nth-child(even) {
+      background: rgba(16, 20, 40, 0.95); }
+    .error404 article .section-inner {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 100vw; }
+    .error404 article .entry-header {
+      padding: 0 1em;
+      margin: 0 auto;
+      max-width: 38.443359375em; }
+      @media (min-width: 1400px) {
+        .error404 article .entry-header {
+          font-size: 1.286em; }
+          .error404 article .entry-header.sidebar-toggled {
+            font-size: 1em; } }
+      .error404 article .entry-header .entry-title {
+        margin-top: 0;
+        margin-bottom: 0.2962962963em; }
+        .error404 article .entry-header .entry-title a {
+          text-decoration: none;
+          color: white; }
+          .error404 article .entry-header .entry-title a:hover {
+            color: #eb6e78; }
+  .error404 .site-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%; }
 
 /*--------------------------------------------------------------
 # Sidebar

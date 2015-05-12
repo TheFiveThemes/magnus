@@ -9,7 +9,8 @@
 
     .featured-image &,
     .header-image &,
-    .blog.home & {
+    .blog.home &,
+    .error404 & {
         position: absolute;
         background: transparent;
         margin-bottom: 0;

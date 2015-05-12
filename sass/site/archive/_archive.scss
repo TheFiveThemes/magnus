@@ -1,0 +1,22 @@
+.archive {
+    .page-header {
+        padding: ms(4) ms(0) ms(7);
+        margin: 0 0 ms(4);
+        border-bottom: 4px solid $color__border-base;
+        text-align: center;
+        color: $color__text-soft;
+        .page-title {
+            font-size: ms(4);
+            color: $color__text-softer;
+            margin: 0;
+        }
+        .page-description {
+            font-style: italic;
+            font-size: ms(-2);
+            letter-spacing: ms(-15);
+            p {
+                margin: ms(-4) 0 0;
+            }
+        }
+    }
+}
