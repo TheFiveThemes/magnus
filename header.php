@@ -35,13 +35,17 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="header-navigation" role="navigation">
-			<?php wp_nav_menu( 
+			<div class="menu-header-container">
+				<?php wp_nav_menu( 
 				array( 
 					'theme_location' => 'secondary', 
+					'container' => 'false',
 					'menu_id' => 'header-menu',
 					'fallback_cb' => 'false',
 					'depth' => '1'
 				) ); ?>
+			</div>
+			
 			<button class="sidebar-toggle" aria-controls="sidebar" aria-expanded="false">
 				<span class="sidebar-toggle-icon"><?php _e( 'Sidebar', 'magnus' ); ?></span>
 			</button>
