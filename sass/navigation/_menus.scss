@@ -1,4 +1,10 @@
-.site-header .main-navigation {
+.nav-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.site-header .header-navigation {
 	position: absolute;
 	display: block;
 	right: 0;

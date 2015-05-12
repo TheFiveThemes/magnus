@@ -38,7 +38,10 @@
 	span {  // Hamburger bars
 		@extend %hamburger-bars;
 		text-indent: -9999px;
-		@include transition(all 0.5s ease-in-out);
+		@include transition-property(color, background, opacity, width);
+		@include transition-duration(0.5s);
+		@include transition-timing-function(ease-in-out);
+
 
 		&:before, 
 		&:after {
@@ -47,7 +50,9 @@
 			position: absolute;
 			@include transform(rotate(0deg));
 			top: ms(1);
-			@include transition(all 0.5s ease-in-out);
+			@include transition-property(color, background, opacity, width);
+			@include transition-duration(0.5s);
+			@include transition-timing-function(ease-in-out);
 		}
 		&:before {
 			margin-top: -8px;
@@ -61,17 +66,21 @@
 
 	
 	&:hover {
-		//background: transparent;
+		background: transparent;
 		box-shadow: 0 0 0 transparent;
 		text-shadow: 0 0 0 transparent;
 		border: 0 none;
 		
 		span {
-			@include transition(all 0.15s ease-in-out);
+			@include transition-property(color, background, opacity, width);
+			@include transition-duration(0.15s);
+			@include transition-timing-function(ease-in-out);
 			background: $color__headernavlink-hover;
 			&:before,
 			&:after {
-				@include transition(all 0.15s ease-in-out);
+				@include transition-property(color, background, opacity, width);
+				@include transition-duration(0.15s);
+				@include transition-timing-function(ease-in-out);
 				width: ms(2);
 				background: $color__headernavlink-hover;
 			}
@@ -91,7 +100,9 @@
 		margin-top: 0;
 		z-index: 9999;
 		border: 0 none;		
-		@include transition(all 0.2s ease-in-out);
+		@include transition-property(color, background, opacity, transform);
+		@include transition-duration(0.2s);
+		@include transition-timing-function(ease-in-out);
         span {
         	background: transparent;
         	&:before,
@@ -99,7 +110,10 @@
 				width: ms(2);
 				margin-top: 0; 
 				@include transform-origin(center);
-				@include transition(all 0.4s ease-in-out);
+				@include transition-property(color, background, opacity, transform);
+				@include transition-duration(0.4s);
+				@include transition-timing-function(ease-in-out);
+
 				background: $color__base-tint80;
 				height: 4px;
 			}
@@ -114,7 +128,9 @@
         &:hover {
 			@include transform(scale(1.1));
     		@include transform-origin(center);
-			@include transition(all 0.15s ease-in-out);
+			@include transition-property(color, background, opacity, transform);
+			@include transition-duration(0.15s);
+			@include transition-timing-function(ease-in-out);
     		span {
     			&:before,
 				&:after {

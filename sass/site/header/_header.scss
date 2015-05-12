@@ -8,14 +8,11 @@
     background: $color__background-header;
 
     .featured-image &,
-    .header-image & {
+    .header-image &,
+    .blog.home & {
         position: absolute;
         background: transparent;
         margin-bottom: 0;
-    }
-
-    .blog.home & {
-        //background: transparent;
     }
 }
 

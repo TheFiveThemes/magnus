@@ -16,6 +16,7 @@ $color__base-tint90: tint($color__base,90%);
 $color__base-tint95: tint($color__base,95%);
 
 $color__base-shade10: shade($color__base,10%);
+$color__base-shade20: shade($color__base,20%);
 
 
 $color__accent: #eb6e78;
@@ -49,7 +50,7 @@ $color__background-pre: $color__base-tint95;
 $color__background-ins: #fff9c0;
 
 $color__background-header: $color__base-tint15;
-$color__background-feature: $color__base-tint10;
+$color__background-feature: $color__base-shade20;
 $color__background-drawer: $color__base-tint20;
 $color__background-footer: $color__base-tint95;
 

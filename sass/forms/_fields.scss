@@ -4,6 +4,7 @@ input[type="url"],
 input[type="password"],
 input[type="search"],
 textarea {
+    box-sizing: border-box;
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
 	border-radius: 3px;
@@ -14,6 +15,12 @@ textarea {
         box-shadow: 0 0 1px 4px $color__outilne-field-focus;
         @include transition(all 0.15s ease-in-out);
 	}
+
+    .sidebar & {  //inputs in the sidebar
+        &:focus {
+            box-shadow: 0 0 1px 4px rgba($color__outilne-field-focus,.3);
+        }
+    }
 }
 
 input[type="text"],

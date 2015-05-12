@@ -91,3 +91,39 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1', '<' ) ) :
 	}
 	add_action( 'wp_head', 'magnus_render_title' );
 endif;
+
+
+
+/**
+ * Limit number of nav menu items on primary menu
+ */
+function my_nav_menu_objects( $sorted_menu_items, $args ) {
+    if ( $args->theme_location != 'secondary' )
+        return $sorted_menu_items;
+    $unset_top_level_menu_item_ids = array();
+    $array_unset_value = 1;
+    $count = 1;
+
+    foreach ( $sorted_menu_items as $sorted_menu_item ) {
+
+        // unset top level menu items if over count 3
+        if ( 0 == $sorted_menu_item->menu_item_parent ) {
+            if ( $count > 3 ) {
+                unset( $sorted_menu_items[$array_unset_value] );
+                $unset_top_level_menu_item_ids[] = $sorted_menu_item->ID;
+            }
+            $count++;
+        }
+
+        // unset child menu items of unset top level menu items
+        if ( in_array( $sorted_menu_item->menu_item_parent, $unset_top_level_menu_item_ids ) )
+            unset( $sorted_menu_items[$array_unset_value] );
+
+        $array_unset_value++;
+    }
+
+    return $sorted_menu_items;
+}
+add_filter( 'wp_nav_menu_objects', 'my_nav_menu_objects', 10, 2 );
+
+?>
