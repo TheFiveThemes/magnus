@@ -140,4 +140,10 @@
     		}
 		}
 	}
+	.sidebar-toggled.admin-bar & {
+		top: 32px;
+		@include respondTo(upto-medium) {
+	        top: 42px;
+	    }
+	}
 }

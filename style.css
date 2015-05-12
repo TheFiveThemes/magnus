@@ -762,6 +762,11 @@ a {
       transition-timing-function: ease-in-out; }
       .sidebar-toggled .sidebar-toggle:hover span:before, .sidebar-toggled .sidebar-toggle:hover span:after {
         background: white; }
+  .sidebar-toggled.admin-bar .sidebar-toggle {
+    top: 32px; }
+    @media (max-width: 800px) {
+      .sidebar-toggled.admin-bar .sidebar-toggle {
+        top: 42px; } }
 
 /*--------------------------------------------------------------
 ## Menus
