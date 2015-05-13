@@ -18,6 +18,8 @@
 }
 
 .site-branding {
+    @include animation(fadein 0.3s ease-out 1s backwards);
+
     position: relative;
     width: 30%;
     float: left;

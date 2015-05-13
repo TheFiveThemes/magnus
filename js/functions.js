@@ -1,8 +1,8 @@
 // Fullpage for home.php
 
-$(document).ready(function() {
-	$('#fullpage').fullpage();
-});
+// jQuery(document).ready(function() {
+// 	jQuery('#fullpage').fullpage();
+// });
 
 
 

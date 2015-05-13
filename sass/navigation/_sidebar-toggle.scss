@@ -8,6 +8,8 @@
 
 // Sidebar Toggle Button
 .sidebar-toggle {
+	@include animation(fadein 0.3s ease-out 1s backwards);
+
 	display: block;
 	@include clearfix();
 	box-shadow: 0 0 0 transparent;
@@ -145,5 +147,12 @@
 		@include respondTo(upto-medium) {
 	        top: 42px;
 	    }
+	}
+
+	//After Sidebar is closed
+	.sidebar-closed & {
+		span {
+			@include animation(fadein 0.3s ease-out 0.4s backwards);
+		}
 	}
 }

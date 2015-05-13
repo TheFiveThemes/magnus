@@ -48,6 +48,82 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
     ## Captions
     ## Galleries
 --------------------------------------------------------------*/
+@-webkit-keyframes image-pulse {
+  0% {
+    -webkit-transform: scale(1.01); }
+  100% {
+    -webkit-transform: scale(1.15); } }
+@-moz-keyframes image-pulse {
+  0% {
+    -moz-transform: scale(1.01); }
+  100% {
+    -moz-transform: scale(1.15); } }
+@keyframes image-pulse {
+  0% {
+    -webkit-transform: scale(1.01);
+    -moz-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    -o-transform: scale(1.01);
+    transform: scale(1.01); }
+  100% {
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    transform: scale(1.15); } }
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes fadein {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes fadein {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes fadein-images {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.6; } }
+@-moz-keyframes fadein-images {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.6; } }
+@keyframes fadein-images {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 0.6; } }
+@-webkit-keyframes movein {
+  0% {
+    -webkit-transform: translateY(10px); }
+  100% {
+    -webkit-transform: translateY(0); } }
+@-moz-keyframes movein {
+  0% {
+    -moz-transform: translateY(10px); }
+  100% {
+    -moz-transform: translateY(0); } }
+@keyframes movein {
+  0% {
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+    transform: translateY(10px); }
+  100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); } }
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -600,6 +676,9 @@ a {
   display: none; }
 
 .sidebar-toggle {
+  -webkit-animation: fadein 0.3s ease-out 1s backwards;
+  -moz-animation: fadein 0.3s ease-out 1s backwards;
+  animation: fadein 0.3s ease-out 1s backwards;
   display: block;
   content: "";
   display: table;
@@ -767,6 +846,10 @@ a {
     @media (max-width: 800px) {
       .sidebar-toggled.admin-bar .sidebar-toggle {
         top: 42px; } }
+  .sidebar-closed .sidebar-toggle span {
+    -webkit-animation: fadein 0.3s ease-out 0.4s backwards;
+    -moz-animation: fadein 0.3s ease-out 0.4s backwards;
+    animation: fadein 0.3s ease-out 0.4s backwards; }
 
 /*--------------------------------------------------------------
 ## Menus
@@ -801,6 +884,9 @@ a {
     .site-header .header-navigation a:hover {
       color: #fff; }
   .site-header .header-navigation .menu-header-container {
+    -webkit-animation: fadein 0.3s ease-out 1s backwards;
+    -moz-animation: fadein 0.3s ease-out 1s backwards;
+    animation: fadein 0.3s ease-out 1s backwards;
     position: relative;
     right: 3.375em;
     opacity: 1;
@@ -808,9 +894,9 @@ a {
     -webkit-transition-property: opacity;
     -moz-transition-property: opacity;
     transition-property: opacity;
-    -webkit-transition-duration: 0.2s;
-    -moz-transition-duration: 0.2s;
-    transition-duration: 0.2s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    transition-duration: 0.5s;
     -webkit-transition-timing-function: ease-in-out;
     -moz-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out; }
@@ -844,6 +930,10 @@ a {
       -webkit-transition-timing-function: ease-in-out;
       -moz-transition-timing-function: ease-in-out;
       transition-timing-function: ease-in-out; }
+    .sidebar-closed .site-header .header-navigation .menu-header-container {
+      -webkit-animation: fadein 0.3s ease-out 0.5s backwards;
+      -moz-animation: fadein 0.3s ease-out 0.5s backwards;
+      animation: fadein 0.3s ease-out 0.5s backwards; }
     @media (max-width: 800px) {
       .site-header .header-navigation .menu-header-container {
         display: none; } }
@@ -1011,6 +1101,9 @@ blockquote.alignright {
     margin-bottom: 0; }
 
 .site-branding {
+  -webkit-animation: fadein 0.3s ease-out 1s backwards;
+  -moz-animation: fadein 0.3s ease-out 1s backwards;
+  animation: fadein 0.3s ease-out 1s backwards;
   position: relative;
   width: 30%;
   float: left;
@@ -1052,30 +1145,10 @@ blockquote.alignright {
 /*--------------------------------------------------------------
 ## Header Feature Image
 --------------------------------------------------------------*/
-@-webkit-keyframes header-image-pulse {
-  0%, 100% {
-    -webkit-transform: scale(1.15); }
-  50% {
-    -webkit-transform: scale(1.01); } }
-@-moz-keyframes header-image-pulse {
-  0%, 100% {
-    -moz-transform: scale(1.15); }
-  50% {
-    -moz-transform: scale(1.01); } }
-@keyframes header-image-pulse {
-  0%, 100% {
-    -webkit-transform: scale(1.15);
-    -moz-transform: scale(1.15);
-    -ms-transform: scale(1.15);
-    -o-transform: scale(1.15);
-    transform: scale(1.15); }
-  50% {
-    -webkit-transform: scale(1.01);
-    -moz-transform: scale(1.01);
-    -ms-transform: scale(1.01);
-    -o-transform: scale(1.01);
-    transform: scale(1.01); } }
 .site-header-image {
+  -webkit-animation: fadein 1s ease-out backwards;
+  -moz-animation: fadein 1s ease-out backwards;
+  animation: fadein 1s ease-out backwards;
   position: relative;
   overflow: hidden;
   background: #101428;
@@ -1087,9 +1160,9 @@ blockquote.alignright {
     width: auto;
     height: auto;
     opacity: 0.6;
-    -webkit-animation: header-image-pulse 25s ease-in-out infinite;
-    -moz-animation: header-image-pulse 25s ease-in-out infinite;
-    animation: header-image-pulse 25s ease-in-out infinite;
+    -webkit-animation: fadein-images 1s ease-out backwards, image-pulse 15s ease-in-out infinite alternate;
+    -moz-animation: fadein-images 1s ease-out backwards, image-pulse 15s ease-in-out infinite alternate;
+    animation: fadein-images 1s ease-out backwards, image-pulse 15s ease-in-out infinite alternate;
     -webkit-transform-origin: bottom center;
     -moz-transform-origin: bottom center;
     -ms-transform-origin: bottom center;
@@ -1100,9 +1173,9 @@ blockquote.alignright {
     width: 100%;
     height: 100%;
     opacity: 0.6;
-    -webkit-animation: header-image-pulse 35s ease-in-out infinite;
-    -moz-animation: header-image-pulse 35s ease-in-out infinite;
-    animation: header-image-pulse 35s ease-in-out infinite;
+    -webkit-animation: fadein-images 1s ease-out backwards, image-pulse 15s ease-in-out infinite alternate;
+    -moz-animation: fadein-images 1s ease-out backwards, image-pulse 15s ease-in-out infinite alternate;
+    animation: fadein-images 1s ease-out backwards, image-pulse 15s ease-in-out infinite alternate;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1212,89 +1285,70 @@ blockquote.alignright {
 /*--------------------------------------------------------------
 ## Home
 --------------------------------------------------------------*/
-@-webkit-keyframes article-image-pulse {
-  0%, 100% {
-    -webkit-transform: scale(1.15); }
-  50% {
-    -webkit-transform: scale(1.01); } }
-@-moz-keyframes article-image-pulse {
-  0%, 100% {
-    -moz-transform: scale(1.15); }
-  50% {
-    -moz-transform: scale(1.01); } }
-@keyframes article-image-pulse {
-  0%, 100% {
-    -webkit-transform: scale(1.15);
-    -moz-transform: scale(1.15);
-    -ms-transform: scale(1.15);
-    -o-transform: scale(1.15);
-    transform: scale(1.15); }
-  50% {
-    -webkit-transform: scale(1.01);
-    -moz-transform: scale(1.01);
-    -ms-transform: scale(1.01);
-    -o-transform: scale(1.01);
-    transform: scale(1.01); } }
-.blog-home-content .section-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0.6;
-  -webkit-animation: article-image-pulse 35s ease-in-out infinite;
-  -moz-animation: article-image-pulse 35s ease-in-out infinite;
-  animation: article-image-pulse 35s ease-in-out infinite;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; }
-.blog-home-content article {
-  position: relative;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  border-bottom: 0;
-  background: #101428;
-  overflow: hidden; }
-  .blog-home-content article:nth-child(even) {
-    background: rgba(16, 20, 40, 0.95); }
-  .blog-home-content article .section-inner {
+.blog-home-content {
+  -webkit-animation: fadein 1s ease-out backwards;
+  -moz-animation: fadein 1s ease-out backwards;
+  animation: fadein 1s ease-out backwards; }
+  .blog-home-content .section-image {
     position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
-    width: 100vw;
-    -webkit-transition: width 0.4s ease-in-out;
-    -moz-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out; }
-    @media (min-width: 800px) {
-      .sidebar-toggled .blog-home-content article .section-inner {
-        width: 50vw;
-        -webkit-transition: width 0.6s ease-in-out;
-        -moz-transition: width 0.6s ease-in-out;
-        transition: width 0.6s ease-in-out; } }
-  .blog-home-content article .entry-header {
-    padding: 0 1em;
-    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    -webkit-animation: fadein-images 1s ease-out backwards, image-pulse 15s ease-in-out infinite alternate;
+    -moz-animation: fadein-images 1s ease-out backwards, image-pulse 15s ease-in-out infinite alternate;
+    animation: fadein-images 1s ease-out backwards, image-pulse 15s ease-in-out infinite alternate;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .blog-home-content article {
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    border-bottom: 0;
+    background: #101428;
+    overflow: hidden; }
+    .blog-home-content article:nth-child(even) {
+      background: rgba(16, 20, 40, 0.95); }
+    .blog-home-content article .section-inner {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 100vw;
+      -webkit-transition: width 0.4s ease-in-out;
+      -moz-transition: width 0.4s ease-in-out;
+      transition: width 0.4s ease-in-out; }
+      @media (min-width: 800px) {
+        .sidebar-toggled .blog-home-content article .section-inner {
+          width: 50vw;
+          -webkit-transition: width 0.6s ease-in-out;
+          -moz-transition: width 0.6s ease-in-out;
+          transition: width 0.6s ease-in-out; } }
+    .blog-home-content article .entry-header {
+      padding: 0 1em;
+      margin: 0 auto;
+      max-width: 38.443359375em; }
+      @media (min-width: 1400px) {
+        .blog-home-content article .entry-header {
+          font-size: 1.286em; }
+          .sidebar-toggled .blog-home-content article .entry-header {
+            font-size: 1em; } }
+      .blog-home-content article .entry-header .entry-title {
+        margin-top: 0;
+        margin-bottom: 0.2962962963em; }
+        .blog-home-content article .entry-header .entry-title a {
+          text-decoration: none;
+          color: white; }
+          .blog-home-content article .entry-header .entry-title a:hover {
+            color: #eb6e78; }
+  .blog-home-content .posts-navigation {
+    padding: 1em;
+    margin: 1em auto 0;
     max-width: 38.443359375em; }
-    @media (min-width: 1400px) {
-      .blog-home-content article .entry-header {
-        font-size: 1.286em; }
-        .sidebar-toggled .blog-home-content article .entry-header {
-          font-size: 1em; } }
-    .blog-home-content article .entry-header .entry-title {
-      margin-top: 0;
-      margin-bottom: 0.2962962963em; }
-      .blog-home-content article .entry-header .entry-title a {
-        text-decoration: none;
-        color: white; }
-        .blog-home-content article .entry-header .entry-title a:hover {
-          color: #eb6e78; }
-.blog-home-content .posts-navigation {
-  padding: 1em;
-  margin: 1em auto 0;
-  max-width: 38.443359375em; }
 
 /*--------------------------------------------------------------
 ## Archive

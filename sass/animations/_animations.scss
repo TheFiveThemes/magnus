@@ -1,0 +1,45 @@
+// Image pulse animation
+@include keyframes(image-pulse) {
+  0% {
+    @include transform(scale(1.01));
+  }
+  100% {
+    @include transform(scale(1.15));
+  }
+}
+
+// Fade-in animation
+@include keyframes(fadein) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Fade-in animation for translucent images
+@include keyframes(fadein-images) {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.6;
+  }
+}
+
+// drop-in animation
+@include keyframes(movein) {
+  0% {
+    @include transform(translateY(10px));
+  }
+  100% {
+    @include transform(translateY(0));
+  }
+}
+
+
+// @include animation(fadein 0.3s ease-out 1s backwards, 
+//     movein 0.8s ease-in-out 1s backwards);
+
+// @include animation(fadein 0.3s ease-out 1s backwards);

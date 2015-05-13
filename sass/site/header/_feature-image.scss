@@ -1,13 +1,5 @@
-@include keyframes(header-image-pulse) {
-  0%, 100% {
-    @include transform(scale(1.15));
-  }
-  50% {
-    @include transform(scale(1.01));
-  }
-}
-
 .site-header-image {
+    @include animation(fadein 1s ease-out backwards);
     position: relative;
     overflow: hidden;
     background: $color__background-feature;
@@ -21,7 +13,7 @@
         width: auto;
         height: auto;
         opacity: 0.6;
-        @include animation(header-image-pulse 25.0s ease-in-out infinite);
+        @include animation(fadein-images 1s ease-out backwards, image-pulse 15.0s ease-in-out infinite alternate);
         @include transform-origin(bottom center);
     }
 
@@ -30,7 +22,7 @@
         width: 100%;
         height: 100%;
         opacity: 0.6;
-        @include animation(header-image-pulse 35.0s ease-in-out infinite);
+        @include animation(fadein-images 1s ease-out backwards, image-pulse 15.0s ease-in-out infinite alternate);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

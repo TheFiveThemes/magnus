@@ -37,13 +37,15 @@
     }
 
     .menu-header-container {
+        @include animation(fadein 0.3s ease-out 1s backwards);
+
     	position: relative;
     	right: ms(6);
     	opacity: 1;
     	z-index: 200;
 
         @include transition-property(opacity);
-        @include transition-duration(0.2s);
+        @include transition-duration(0.5s);
         @include transition-timing-function(ease-in-out);
 
 	    ul { // Parent list Globals
@@ -75,11 +77,14 @@
 
 		.sidebar-toggled & {
 	    	opacity: 0;	    	
-			//right: -50vw;
             @include transition-property(opacity);
             @include transition-duration(0.5s);
             @include transition-timing-function(ease-in-out);
 	    }
+
+        .sidebar-closed & {
+            @include animation(fadein 0.3s ease-out 0.5s backwards);
+        }
 
 		@include respondTo(upto-medium) {
 	        display: none;

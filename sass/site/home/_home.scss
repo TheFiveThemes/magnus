@@ -1,21 +1,12 @@
-@include keyframes(article-image-pulse) {
-  0%, 100% {
-    @include transform(scale(1.15));
-  }
-  50% {
-    @include transform(scale(1.01));
-  }
-}
-
 .blog-home-content {
-
+    @include animation(fadein 1s ease-out backwards);
+    
     .section-image {
         position: absolute;
         width: 100%;
         height: 100%;
         opacity: 0.6;
-        @include animation(article-image-pulse 35.0s ease-in-out infinite);
-
+        @include animation(fadein-images 1s ease-out backwards, image-pulse 15.0s ease-in-out infinite alternate);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
