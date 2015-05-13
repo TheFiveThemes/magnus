@@ -850,7 +850,7 @@ a {
 
 .sidebar .main-navigation {
   padding-bottom: 2.25em;
-  border-bottom: 4px solid #373b50;
+  margin-top: 0;
   font-family: "Montserrat", sans-serif;
   font-size: 1em;
   clear: both;
@@ -860,18 +860,18 @@ a {
     display: none; }
   .sidebar .main-navigation .sub-menu {
     padding-left: 1em;
-    border-left: 4px solid #43475b; }
+    border-left: 2px solid #373b50; }
     .sidebar .main-navigation .sub-menu a {
       font-size: 0.6666666667em;
       opacity: .5; }
       .sidebar .main-navigation .sub-menu a:hover {
         opacity: 1; }
   .sidebar .main-navigation li {
-    padding: 0; }
+    padding: 0;
+    margin: 0; }
   .sidebar .main-navigation a {
     display: block;
-    padding: 1em 0;
-    font-size: 0.8573333333em; }
+    padding: 1em 0; }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -992,10 +992,7 @@ blockquote.alignright {
 --------------------------------------------------------------*/
 .site {
   position: relative;
-  width: 100vw;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out; }
+  width: 100vw; }
 
 /*--------------------------------------------------------------
 ## Header
@@ -1321,10 +1318,6 @@ blockquote.alignright {
 /*--------------------------------------------------------------
 ## Asides
 --------------------------------------------------------------*/
-.blog .format-aside .entry-title,
-.archive .format-aside .entry-title {
-  display: none; }
-
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1556,7 +1549,7 @@ blockquote.alignright {
 --------------------------------------------------------------*/
 .sidebar {
   position: fixed;
-  width: 100%;
+  width: 110%;
   height: 100%;
   top: 0;
   right: 0;
@@ -1570,23 +1563,36 @@ blockquote.alignright {
   overflow-x: hidden;
   z-index: 9000;
   background: #43475b;
-  padding: 1em 3.375em 1em 1.5em;
+  padding: 0 3.375em 0 0;
   color: white;
-  -webkit-transition: all 0.5s ease-in;
-  -moz-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in; }
-  .admin-bar .sidebar {
-    padding-top: 2.25em; }
+  -webkit-transition-property: -webkit-transform, width;
+  -moz-transition-property: -moz-transform, width;
+  transition-property: transform, width;
+  -webkit-transition-duration: 0.7s, 0.7s;
+  -moz-transition-duration: 0.7s, 0.7s;
+  transition-duration: 0.7s, 0.7s;
+  -webkit-transition-timing-function: cubic-bezier(0.05, 0, 0.1, 1), ease-in;
+  -moz-transition-timing-function: cubic-bezier(0.05, 0, 0.1, 1), ease-in;
+  transition-timing-function: cubic-bezier(0.05, 0, 0.1, 1), ease-in;
+  -webkit-transition-delay: 0s, 0.1s;
+  -moz-transition-delay: 0s, 0.1s;
+  transition-delay: 0s, 0.1s; }
   @media (min-width: 800px) {
     .sidebar {
+      width: 60%; } }
+  @media (min-width: 1400px) {
+    .sidebar {
       width: 50%; } }
+  @media (min-width: 1600px) {
+    .sidebar {
+      width: 40%; } }
   @media (max-width: 1100px) {
     .sidebar {
-      padding: 1em 1.5em; } }
+      padding: 1em 0; } }
   .sidebar .sidebar-inner {
     max-width: 21.972515625em;
-    margin: 0 auto;
-    padding: 1.5em 0; }
+    margin: 0;
+    padding: 0; }
   .sidebar::-webkit-scrollbar {
     display: none; }
   .sidebar ul, .sidebar ol {
@@ -1605,36 +1611,75 @@ blockquote.alignright {
   -ms-transform: translateX(0%);
   -o-transform: translateX(0%);
   transform: translateX(0%);
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out; }
+  width: 100%;
+  -webkit-transition-property: -webkit-transform, width;
+  -moz-transition-property: -moz-transform, width;
+  transition-property: transform, width;
+  -webkit-transition-duration: 0.25s, 0.25s;
+  -moz-transition-duration: 0.25s, 0.25s;
+  transition-duration: 0.25s, 0.25s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 0, 0.05, 1), ease-out;
+  -moz-transition-timing-function: cubic-bezier(0.1, 0, 0.05, 1), ease-out;
+  transition-timing-function: cubic-bezier(0.1, 0, 0.05, 1), ease-out;
+  -webkit-transition-delay: 0s, 0.1s;
+  -moz-transition-delay: 0s, 0.1s;
+  transition-delay: 0s, 0.1s; }
+  @media (min-width: 800px) {
+    .sidebar-toggled .sidebar {
+      width: 50%;
+      -webkit-transition-property: -webkit-transform, width;
+      -moz-transition-property: -moz-transform, width;
+      transition-property: transform, width;
+      -webkit-transition-duration: 0.35s, 0.35s;
+      -moz-transition-duration: 0.35s, 0.35s;
+      transition-duration: 0.35s, 0.35s;
+      -webkit-transition-timing-function: cubic-bezier(0.1, 0, 0.05, 1), ease-out;
+      -moz-transition-timing-function: cubic-bezier(0.1, 0, 0.05, 1), ease-out;
+      transition-timing-function: cubic-bezier(0.1, 0, 0.05, 1), ease-out;
+      -webkit-transition-delay: 0s, 0.15s;
+      -moz-transition-delay: 0s, 0.15s;
+      transition-delay: 0s, 0.15s; } }
+  @media (min-width: 1400px) {
+    .sidebar-toggled .sidebar {
+      width: 40%; } }
+  @media (min-width: 1600px) {
+    .sidebar-toggled .sidebar {
+      width: 30%; } }
 .sidebar-toggled .site {
-  -webkit-transition: width 0.6s ease-in-out;
-  -moz-transition: width 0.6s ease-in-out;
-  transition: width 0.6s ease-in-out;
   width: 100%; }
   @media (min-width: 800px) {
     .sidebar-toggled .site {
-      width: 50%; } }
+      width: 50%;
+      -webkit-transition: width 0.5s ease-out 0.15s;
+      -moz-transition: width 0.5s ease-out 0.15s;
+      transition: width 0.5s ease-out 0.15s; } }
+  @media (min-width: 1400px) {
+    .sidebar-toggled .site {
+      width: 60%; } }
+  @media (min-width: 1600px) {
+    .sidebar-toggled .site {
+      width: 70%; } }
 
 .site {
-  -webkit-transition: width 0.4s ease-in-out;
-  -moz-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out; }
+  -webkit-transition: width 0.15s ease-out;
+  -moz-transition: width 0.15s ease-out;
+  transition: width 0.15s ease-out; }
 
 /*--------------------------------------------------------------
 ## Widgets
 --------------------------------------------------------------*/
 .widget {
-  color: #a1a3ad;
-  margin: 3.375em 0;
+  margin: 0;
+  padding: 3.375em;
   font-size: 0.8573333333em;
+  color: #a1a3ad;
   text-shadow: 0 1px 2px #43475b;
-  padding-bottom: 3.375em;
-  border-bottom: 4px solid #373b50;
   /* Make sure select elements fit in widgets. */ }
-  .widget select {
+  .widget select, .widget input {
     max-width: 100%; }
+  @media (max-width: 480px) {
+    .widget {
+      padding: 1.5em; } }
 
 /* Search widget. */
 .widget_search .search-field {

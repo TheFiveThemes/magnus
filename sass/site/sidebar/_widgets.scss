@@ -1,18 +1,19 @@
 .widget {
-    color: $color__text-sidebar;
-
-	margin: ms(6) 0;
-
+	margin: 0;
+    padding: ms(6);
     font-size: ms(-1);
+    color: $color__text-sidebar;
     text-shadow: 0 1px 2px $color__text-shadow-sidebar;
 
-    padding-bottom: ms(6);
-    border-bottom: 4px solid $color__base-tint15;
-
 	/* Make sure select elements fit in widgets. */
-	select {
+	select, input {
 		max-width: 100%;
 	}
+
+    
+    @include respondTo(upto-narrow) {
+        padding: ms(2);
+    }
 }
 
 /* Search widget. */

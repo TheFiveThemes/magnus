@@ -1,6 +1,6 @@
 .sidebar {
     position: fixed;
-    width: 100%;
+    width: 110%;
     height: 100%;
     top: 0;
     //right: -100%;
@@ -14,28 +14,38 @@
     z-index: 9000;
     background: $color__background-drawer;
 
-    padding: ms(0) ms(6) ms(0) ms(2);
+    padding: 0 ms(6) 0 0;
     color: white;
 
-    @include transition(all 0.5s ease-in); //controls closing animation
+    //controls closing animation
+    @include transition-property(transform, width);
+    @include transition-duration(0.7s, 0.7s);
+    @include transition-timing-function(cubic-bezier(.05,0,.1,1), ease-in);
+    @include transition-delay(0s, 0.1s);
 
-    .admin-bar & {
-        padding-top: ms(4);
-    }
+
+    // .admin-bar & {
+    //     padding-top: ms(4);
+    // }
 
     @include respondTo(atleast-medium) {
+        width: 60%;
+    }
+    @include respondTo(atleast-extra-wide) {
         width: 50%;
-        //right: -50%;
+    }
+    @include respondTo(atleast-ultra-wide) {
+        width: 40%;
     }
 
     @include respondTo(upto-wide) {
-        padding: ms(0) ms(2);
+        padding: ms(0) 0;
     }
 
     .sidebar-inner {
         max-width: ms(15);
-        margin: 0 auto;
-        padding: ms(2) 0;
+        margin: 0;
+        padding: 0;
     }
 
     &::-webkit-scrollbar {
@@ -59,21 +69,49 @@
 
 .sidebar-toggled {
     .sidebar {
-        //right: 0;
         @include transform(translateX(0%));
+        width: 100%;
 
-        @include transition(all 0.5s ease-in-out); //controls opening animation
+        //controls opening animation
+        @include transition-property(transform, width);
+        @include transition-duration(0.25s, 0.25s);
+        @include transition-timing-function(cubic-bezier(.1,0,.05,1), ease-out);
+        @include transition-delay(0s, 0.1s);
+
+        @include respondTo(atleast-medium) {
+            width: 50%;
+            //controls opening animation for all media queries above medium
+            @include transition-property(transform, width);
+            @include transition-duration(0.35s, 0.35s);
+            @include transition-timing-function(cubic-bezier(.1,0,.05,1), ease-out);
+            @include transition-delay(0s, 0.15s);
+        }
+        @include respondTo(atleast-extra-wide) {
+            width: 40%;
+        }
+        @include respondTo(atleast-ultra-wide) {
+            width: 30%;
+        }
     }
     .site {
-        @include transition(width 0.6s ease-in-out);
         width: 100%;
         @include respondTo(atleast-medium) {
             width: 50%;
+
+            //controls opening animation for all media queries above medium
+            @include transition(width 0.5s ease-out 0.15s);
+        }
+        @include respondTo(atleast-extra-wide) {
+            width: 60%;
+        }
+        @include respondTo(atleast-ultra-wide) {
+            width: 70%;
         }
     }
 }
 .site {
-    @include transition(width 0.4s ease-in-out);
+    //controls closing animation
+    @include transition(width 0.15s ease-out);
 }
 
 

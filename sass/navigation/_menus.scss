@@ -96,9 +96,8 @@
 
 .sidebar {
 	.main-navigation {
-        padding-bottom: ms(4);
-        border-bottom: 4px solid $color__base-tint15;
-        
+        padding-bottom: ms(4);  
+        margin-top: 0;      
 		@include text-format(heading-small);
 
 		h2 {
@@ -107,7 +106,7 @@
 
         .sub-menu { 
             padding-left: ms(0);
-            border-left: 4px solid $color__base-tint20;
+            border-left: 2px solid $color__base-tint15;
             a {
             	font-size: ms(-2);
             	opacity: .5;
@@ -118,11 +117,11 @@
         } 
         li {
             padding: 0;
+            margin: 0;
         }
         a {
         	display: block;
         	padding: ms(0) 0;
-        	font-size: ms(-1);
         }
     }
 

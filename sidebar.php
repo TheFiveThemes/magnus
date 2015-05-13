@@ -10,7 +10,7 @@ if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) || is_active_sidebar(
         <div id="sidebar-inner" class="sidebar-inner">
 
         <?php if ( has_nav_menu( 'primary' ) ) : ?>
-            <nav class="main-navigation" role="navigation">
+            <nav class="main-navigation widget" role="navigation">
                 <h2 class="menu-heading widget-title"><?php _e( 'Navigation', 'magnus' ); ?></h2>
                 <?php
                     // Primary navigation menu.
@@ -23,7 +23,7 @@ if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) || is_active_sidebar(
         <?php endif; ?>
 
         <?php if ( has_nav_menu( 'social' ) ) : ?>
-            <nav id="social-navigation" class="social-navigation" role="navigation">
+            <nav id="social-navigation widget" class="social-navigation" role="navigation">
                 <?php
                     // Social links navigation menu.
                     wp_nav_menu( array(
