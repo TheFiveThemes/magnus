@@ -41,7 +41,7 @@
 		@extend %hamburger-bars;
 		text-indent: -9999px;
 		@include transition-property(color, background, opacity, width);
-		@include transition-duration(0.5s);
+		@include transition-duration(0.3s);
 		@include transition-timing-function(ease-in-out);
 		
 		&:before, 
