@@ -15,12 +15,6 @@
         height: 100%;
         opacity: 0.6;
         @include animation(article-image-pulse 35.0s ease-in-out infinite);
-        
-        // -webkit-filter: blur(15px);
-        // -moz-filter: blur(15px);
-        // -o-filter: blur(15px);
-        // -ms-filter: blur(15px);
-        // filter: blur(15px);
 
         background-size: cover;
         background-position: center;

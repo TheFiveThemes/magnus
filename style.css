@@ -1003,7 +1003,7 @@ blockquote.alignright {
   left: 0;
   width: 100%;
   padding: 1em 1em 1.286em;
-  margin-bottom: 2.25em;
+  margin-bottom: 0;
   background: #373b50; }
   .featured-image .site-header, .header-image .site-header, .blog.home .site-header, .error404 .site-header {
     position: absolute;
@@ -1079,7 +1079,8 @@ blockquote.alignright {
   position: relative;
   overflow: hidden;
   background: #101428;
-  line-height: 0; }
+  line-height: 0;
+  margin-bottom: 2.25em; }
   .site-header-image img {
     max-width: 100%;
     min-width: 100%;
@@ -1111,7 +1112,7 @@ blockquote.alignright {
     min-height: 100px; }
   @media (max-width: 480px) {
     .featured-image .site-header-image {
-      height: 70vh; }
+      height: 50vh; }
       .featured-image .site-header-image img {
         display: none; }
       .featured-image .site-header-image .section-image {
@@ -1298,21 +1299,25 @@ blockquote.alignright {
 /*--------------------------------------------------------------
 ## Archive
 --------------------------------------------------------------*/
-.archive .page-header {
+.archive .page-header,
+.search-results .page-header {
   padding: 2.25em 1em 4.34025em;
   margin: 0 0 2.25em;
   border-bottom: 4px solid #f3f3f4;
   text-align: center;
   color: #a1a3ad; }
-  .archive .page-header .page-title {
+  .archive .page-header .page-title,
+  .search-results .page-header .page-title {
     font-size: 1.5em;
     color: #d0d1d6;
     margin: 0; }
-  .archive .page-header .page-description {
+  .archive .page-header .page-description,
+  .search-results .page-header .page-description {
     font-style: italic;
     font-size: 0.6666666667em;
     letter-spacing: 0.0501777168em; }
-    .archive .page-header .page-description p {
+    .archive .page-header .page-description p,
+    .search-results .page-header .page-description p {
       margin: 0.4444444444em 0 0; }
 
 /*--------------------------------------------------------------
@@ -1539,10 +1544,17 @@ blockquote.alignright {
           color: white; }
           .error404 article .entry-header .entry-title a:hover {
             color: #eb6e78; }
-  .error404 .site-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%; }
+  .error404.header-image .site-header-image {
+    display: none; }
+
+.error404 .site-content,
+.search-no-results .site-content {
+  padding-bottom: 100px; }
+.error404 .site-footer,
+.search-no-results .site-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
 
 /*--------------------------------------------------------------
 # Sidebar

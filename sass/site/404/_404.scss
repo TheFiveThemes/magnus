@@ -72,8 +72,17 @@
         }
     }
 
+    &.header-image .site-header-image {
+        display: none;
+    }
+}
 
-    .site-footer {
+.error404,
+.search-no-results {
+    .site-content {
+        padding-bottom: 100px;
+    }
+    .site-footer{
         position: fixed;
         bottom: 0;
         width: 100%;
