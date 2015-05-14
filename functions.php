@@ -5,13 +5,6 @@
  * @package Magnus
  */
 
-/**
- * Set the content width based on the theme's design and stylesheet.
- */
-if ( ! isset( $content_width ) ) {
-	$content_width = 1088; /* pixels */
-}
-
 if ( ! function_exists( 'magnus_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -65,12 +58,6 @@ function magnus_setup() {
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
 	) );
 
-	// Set up the WordPress core custom background feature.
-	// add_theme_support( 'custom-background', apply_filters( 'magnus_custom_background_args', array(
-	// 	'default-color' => 'ffffff',
-	// 	'default-image' => '',
-	// ) ) );
-
 	/*
 	 * This theme styles the visual editor to resemble the theme style,
 	 * specifically font, colors, icons, and column width.
@@ -80,6 +67,15 @@ function magnus_setup() {
 endif; // magnus_setup
 add_action( 'after_setup_theme', 'magnus_setup' );
 
+/**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ * Priority 0 to make it available to lower priority callbacks.
+ * @global int $content_width
+ */
+function magnus_content_width() {
+    $GLOBALS['content_width'] = apply_filters( 'magnus_content_width', 1088 );
+}
+add_action( 'after_setup_theme', 'magnus_content_width', 0 );
 
 /**
  * Register widget area.
@@ -128,7 +124,7 @@ function magnus_fonts_url() {
     * supported by Roboto Slab, translate this to 'off'. Do not translate
     * into your own language.
     */
-    $karla = _x( 'on', 'Source Sans Pro font: on or off', 'magnus' );
+    $karla = _x( 'on', 'Karla font: on or off', 'magnus' );
  
     if ( 'off' !== $montserrat || 'off' !== $karla ) {
         $font_families = array();
@@ -167,7 +163,7 @@ function magnus_scripts() {
 	wp_enqueue_style( 'magnus-style', get_stylesheet_uri() );
 
     // Load scripts
-	wp_enqueue_script( 'magnus-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'magnus-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20120206', true );
 
 	wp_enqueue_script( 'magnus-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
@@ -181,7 +177,7 @@ function magnus_scripts() {
 
     // If is home, load the fullscreen script
     if ( is_home() ) {
-        wp_enqueue_script( 'magnus-fullscreen', get_template_directory_uri() . '/js/jquery.fullPage.js', array( 'jquery' ) );
+        wp_enqueue_script( 'magnus-full-screen', get_template_directory_uri() . '/js/jquery.fullPage.js', array('jquery'), '20120206', true );
     }
 
 	// Javacript functions in Magnus.

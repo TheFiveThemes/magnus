@@ -1,33 +1,53 @@
-// Fullpage for home.php
+( function( $ ) {
 
-// jQuery(document).ready(function() {
-// 	jQuery('#fullpage').fullpage();
-// });
+	// Remove widdows and orphans from post titles
+	$("h1.entry-title a, .single h1.entry-title").each(function() {
+	  var wordArray = $(this).text().split(" ");
+	  if (wordArray.length > 1) {
+	    wordArray[wordArray.length-2] += "&nbsp;" + wordArray[wordArray.length-1];
+	    wordArray.pop();
+	    $(this).html(wordArray.join(" "));
+	  }
+	});
+
+
+	// Fullpage for home.php
+	$(document).ready(function() {
+	    $('#fullpage').fullpage({
+	    	css3: true,
+	    	easingcss3: 'ease-out',
+	    	autoScrolling: false,
+	    });
+	});
 
 
 
 // Add a class to big image and caption >= 1088px.
 // For some reason it's not working... HELP!
 
-	function bigImageClass() {
-		$( '.entry-content img.size-full' ).each( function() {
-			var img = $( this ),
-			    caption = $( this ).closest( 'figure' ),
-			    newImg = new Image();
+	// function bigImageClass() {
+	// 	$( '.entry-content img.size-full' ).each( function() {
+	// 		var img = $( this ),
+	// 		    caption = $( this ).closest( 'figure' ),
+	// 		    newImg = new Image();
 
-			newImg.src = img.attr( 'src' );
+	// 		newImg.src = img.attr( 'src' );
 
-			$( newImg ).load( function() {
-				var imgWidth = newImg.width;
+	// 		$( newImg ).load( function() {
+	// 			var imgWidth = newImg.width;
 
-				if ( imgWidth >= 1088 ) {
-					$( img ).addClass( 'size-big' );
-				}
+	// 			if ( imgWidth >= 1088 ) {
+	// 				$( img ).addClass( 'size-big' );
+	// 			}
 
-				if ( caption.hasClass( 'wp-caption' ) && imgWidth >= 1088 ) {
-					caption.addClass( 'caption-big' );
-					caption.removeAttr( 'style' );
-				}
-			} );
-		} );
-	}
+	// 			if ( caption.hasClass( 'wp-caption' ) && imgWidth >= 1088 ) {
+	// 				caption.addClass( 'caption-big' );
+	// 				caption.removeAttr( 'style' );
+	// 			}
+	// 		} );
+	// 	} );
+	// }
+
+
+
+} )( jQuery );
