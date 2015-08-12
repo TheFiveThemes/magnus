@@ -12,13 +12,13 @@
 
 
 	// Fullpage for home.php
-	$(document).ready(function() {
-	    $('#fullpage').fullpage({
-	    	css3: true,
-	    	easingcss3: 'ease-out',
-	    	autoScrolling: false,
-	    });
-	});
+	// $(document).ready(function() {
+	//     $('#fullpage').fullpage({
+	//     	css3: true,
+	//     	easingcss3: 'ease-out',
+	//     	autoScrolling: false,
+	//     });
+	// });
 
 
 

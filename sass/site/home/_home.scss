@@ -1,6 +1,11 @@
 .blog-home-content {
     @include animation(fadein 1s ease-out backwards);
-    
+
+    .site-main {
+        overflow: hidden;
+        background: $color__background-feature;
+    }
+
     .section-image {
         position: absolute;
         width: 100%;
@@ -14,13 +19,30 @@
 
     article {
         position: relative;
-        height: 100vh;
+        width: 50%;
+        height: 50vh;
         margin: 0;
         padding: 0;
+        float: left;
         border-bottom: 0;
         background: $color__background-feature;
 
         overflow: hidden;
+
+        @include respondTo(upto-medium) {
+            width: 100%;
+            height: 100vh;
+            float: none;
+        }
+
+        &:first-child {
+            width: 100%;
+            height: 100vh;
+        }
+
+        &:last-child {
+            clear: right;
+        }
 
         &:nth-child(even) {
             background: rgba($color__background-feature,.95);
@@ -30,11 +52,11 @@
             position: absolute;
             top: 50%;
             @include transform(translateY(-50%));
-            width: 100vw;
+            width: 100%;
             @include transition(width 0.4s ease-in-out);
             @include respondTo(atleast-medium) {
                 .sidebar-toggled & {
-                    width: 50vw;
+                    width: 50%;
                     @include transition(width 0.6s ease-in-out);
                 }
             }
@@ -44,12 +66,18 @@
             padding: 0 ms(0);
             margin: 0 auto;
             max-width: ms(18);
+            font-size: ms(-2); 
+            text-align: center;
             
             @include respondTo(atleast-extra-wide) {
-                font-size: ms(1);
+                font-size: ms(-1);
                 .sidebar-toggled & {
-                    font-size: ms(0);
+                    font-size: ms(-2);
                 }
+            }
+
+            @include respondTo(upto-medium) {
+                font-size: ms(0);
             }
 
             .entry-title {
@@ -63,8 +91,18 @@
                     }
                 }
             }
-
         }
+        
+        &:first-child .entry-header {
+            font-size: ms(0);
+            @include respondTo(atleast-extra-wide) {
+                font-size: ms(1);
+                .sidebar-toggled & {
+                    font-size: ms(0);
+                }
+            }
+        }
+
     }
 
     .posts-navigation {
