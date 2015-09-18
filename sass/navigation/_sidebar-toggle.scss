@@ -28,7 +28,7 @@
 	padding: ms(1) ms(0) ms(2);
 	z-index: 100;
 
-	%hamburger-bars {
+	%hamburger-bar {
 		display: block;
 		width: ms(2);
 		height: 3px;
@@ -38,7 +38,7 @@
 	}
 
 	span {  // Hamburger bars
-		@extend %hamburger-bars;
+		@extend %hamburger-bar;
 		text-indent: -9999px;
 		@include transition-property(color, background, opacity, width);
 		@include transition-duration(0.3s);
@@ -47,7 +47,7 @@
 		&:before, 
 		&:after {
 			content: '';
-			@extend %hamburger-bars;
+			@extend %hamburger-bar;
 			position: absolute;
 			@include transform(rotate(0deg));
 			top: ms(1);

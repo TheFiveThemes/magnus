@@ -1,5 +1,5 @@
 .site-header-image {
-    @include animation(fadein 1s ease-out backwards);
+    @include animation(fadein 2s ease-out backwards);
     position: relative;
     overflow: hidden;
     background: $color__background-feature;
@@ -32,8 +32,8 @@
 
     .featured-image &,
     .header-image & {
-        max-height: 70vh;
-        min-height: 100px;
+        max-height: 100vh;
+        min-height: 50vh;
     }
 
     .featured-image & {
@@ -47,7 +47,7 @@
             }
         }
         @include respondTo(atleast-wide) {
-            height: 80vh;
+            height: 95vh;
             img {
                 display: none;
             }

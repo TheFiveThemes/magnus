@@ -19,9 +19,6 @@
     max-width: ms(18);
     @include respondTo(atleast-extra-wide) {
         font-size: ms(1);
-        &.sidebar-toggled {
-            font-size: ms(0);
-        }
     }
 }
 

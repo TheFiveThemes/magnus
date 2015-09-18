@@ -27,13 +27,13 @@
     // }
 
     @include respondTo(atleast-medium) {
-        width: 50%;
+        width: 25%;
     }
     @include respondTo(atleast-extra-wide) {
-        width: 40%;
+        width: 25%;
     }
     @include respondTo(atleast-ultra-wide) {
-        width: 30%;
+        width: 25%;
     }
 
     @include respondTo(upto-wide) {
@@ -41,8 +41,8 @@
     }
 
     .sidebar-inner {
-        max-width: ms(15);
-        margin: 0;
+        max-width: ms(16);
+        margin: 0 auto;
         padding: 0;
     }
 
@@ -77,7 +77,7 @@
         @include transition-delay(0s, 0.1s);
 
         @include respondTo(atleast-medium) {
-            width: 50%;
+            width: ms(15);
             //controls opening animation for all media queries above medium
             @include transition-property(transform, width);
             @include transition-duration(0.35s, 0.35s);
@@ -88,16 +88,9 @@
     .site {
         width: 100%;
         @include respondTo(atleast-medium) {
-            width: 50%;
 
             //controls opening animation for all media queries above medium
             @include transition(width 0.5s ease-out 0.15s);
-        }
-        @include respondTo(atleast-extra-wide) {
-            width: 60%;
-        }
-        @include respondTo(atleast-ultra-wide) {
-            width: 70%;
         }
     }
 }

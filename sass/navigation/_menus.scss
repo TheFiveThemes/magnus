@@ -138,34 +138,52 @@
 
 
 
-
-
-
+// Post Navigation
 
 .comment-navigation,
 .posts-navigation,
 .post-navigation {
-
-	.site-main & {
-		margin: 0 0 1.5em;
-		overflow: hidden;
-	}
     & .nav-previous,
     & .nav-next {
-        width: 50%;
         a {
             display: inline-block;
             text-decoration: none;
             @include text-format(heading-small);
         }
     }
-	& .nav-previous {
-		float: left;
-	}
-	& .nav-next {
-		float: right;
-		text-align: right;
-	}
+    & .nav-previous,
+    & .nav-next {
+        width: 50%;
+    }
+    & .nav-previous {
+        float: left;
+    }
+    & .nav-next {
+        float: right;
+        text-align: right;
+    }
+}
+
+.comment-navigation,
+.post-navigation {
+    .site-main & {
+        margin: 0 0 1.5em;
+        overflow: hidden;
+    }
+    & .nav-next {
+        text-align: right;
+    }
+}
+
+.posts-navigation {
+    & .nav-previous {
+        padding-right: 1em;
+        text-align: right;
+    }
+    & .nav-next {
+        padding-left: 1em;
+        text-align: left;
+    }
 }
 
 
