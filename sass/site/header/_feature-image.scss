@@ -30,15 +30,9 @@
         display: none;
     }
 
-    .featured-image &,
-    .header-image & {
-        max-height: 100vh;
-        min-height: 50vh;
-    }
-
     .featured-image & {
         @include respondTo(upto-narrow) {
-            height: 50vh;
+            height: 60vh;
             img {
                 display: none;
             }
@@ -47,7 +41,7 @@
             }
         }
         @include respondTo(atleast-wide) {
-            height: 95vh;
+            height: 100vh;
             img {
                 display: none;
             }

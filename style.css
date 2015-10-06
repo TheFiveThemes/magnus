@@ -1184,19 +1184,16 @@ blockquote.alignright {
     background-position: center;
     background-repeat: no-repeat;
     display: none; }
-  .featured-image .site-header-image, .header-image .site-header-image {
-    max-height: 100vh;
-    min-height: 50vh; }
   @media (max-width: 480px) {
     .featured-image .site-header-image {
-      height: 50vh; }
+      height: 60vh; }
       .featured-image .site-header-image img {
         display: none; }
       .featured-image .site-header-image .section-image {
         display: block; } }
   @media (min-width: 1100px) {
     .featured-image .site-header-image {
-      height: 95vh; }
+      height: 100vh; }
       .featured-image .site-header-image img {
         display: none; }
       .featured-image .site-header-image .section-image {
