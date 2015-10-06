@@ -100,7 +100,10 @@
 		top: 0;
 		margin-top: 0;
 		z-index: 9999;
-		border: 0 none;		
+		border: 0 none;	
+
+		@include transform(scale(0.9));
+
 		@include transition-property(color, background, opacity, transform);
 		@include transition-duration(0.2s);
 		@include transition-timing-function(ease-in-out);
@@ -117,7 +120,7 @@
 				@include transition-duration(0.4s);
 				@include transition-timing-function(ease-in-out);
 
-				background: $color__base-tint80;
+				background: $color__headerlink-toggle-open;
 				height: 4px;
 			}
 			&:before {
@@ -129,7 +132,7 @@
         }
 
         &:hover {
-			@include transform(scale(1.1));
+			@include transform(scale(1));
     		@include transform-origin(center);
 			@include transition-property(color, background, opacity, transform);
 			@include transition-duration(0.15s);
@@ -137,7 +140,7 @@
     		span {
     			&:before,
 				&:after {
-					background: white;
+					background: $color__headerlink-toggle-open-hover;
 				}
     		}
 		}

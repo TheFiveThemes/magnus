@@ -4,46 +4,39 @@
     height: 100%;
     top: 0;
     right: 0;
-    @include transform(translateX(100%));
-
     left: auto;
+    
+    @include transform(translateX(100%));
+    
+    padding: ms(2);
     overflow: scroll;
     overflow-x: hidden;
     z-index: 9000;
-    background: $color__background-drawer;
-
-    padding: 0 ms(6) 0 0;
+    
+    background-color: $color__background-drawer;
     color: white;
+    opacity: 0;
 
     //controls closing animation
-    @include transition-property(transform, width);
-    @include transition-duration(0.7s, 0.7s);
-    @include transition-timing-function(ease-out, ease-in);
-    @include transition-delay(0s, 0.1s);
-
-
-    // .admin-bar & {
-    //     padding-top: ms(4);
-    // }
+    @include transition-property(transform, width, opacity);
+    @include transition-duration(0.5s, 0.5s, 0.4s);
+    @include transition-timing-function(ease-out, ease-in, ease-out);
+    @include transition-delay(0.05s, 0.1s, 0.05s);
 
     @include respondTo(atleast-medium) {
-        width: 25%;
-    }
-    @include respondTo(atleast-extra-wide) {
-        width: 25%;
-    }
-    @include respondTo(atleast-ultra-wide) {
-        width: 25%;
-    }
-
-    @include respondTo(upto-wide) {
-        padding: ms(0) 0;
+        width: $size__site-sidebar;
+        padding: ms(2) 0;
+        background: rgba($color__background-drawer,.9);
     }
 
     .sidebar-inner {
         max-width: ms(16);
         margin: 0 auto;
         padding: 0;
+        opacity: 0;
+
+        //controls closing animation
+        @include transition(opacity,0.4s,ease-out);
     }
 
     &::-webkit-scrollbar {
@@ -69,34 +62,28 @@
     .sidebar {
         @include transform(translateX(0%));
         width: 100%;
+        opacity: 1;
 
         //controls opening animation
-        @include transition-property(transform, width);
-        @include transition-duration(0.25s, 0.25s);
-        @include transition-timing-function(ease-out, ease-out);
-        @include transition-delay(0s, 0.1s);
+        @include transition-property(transform, opacity);
+        @include transition-duration(0.25s, 0.30s);
+        @include transition-timing-function(ease-out);
 
         @include respondTo(atleast-medium) {
-            width: ms(15);
-            //controls opening animation for all media queries above medium
-            @include transition-property(transform, width);
-            @include transition-duration(0.35s, 0.35s);
-            @include transition-timing-function(ease-out, ease-out);
-            @include transition-delay(0s, 0.15s);
-        }
-    }
-    .site {
-        width: 100%;
-        @include respondTo(atleast-medium) {
+            width: $size__site-sidebar;
 
             //controls opening animation for all media queries above medium
-            @include transition(width 0.5s ease-out 0.15s);
+            @include transition-property(transform, width, opacity);
+            @include transition-duration(0.30s);
+            @include transition-timing-function(ease-out);
+            @include transition-delay(0s, 0.15s, 0s);
         }
     }
-}
-.site {
-    //controls closing animation
-    @include transition(width 0.15s ease-out);
+    .sidebar-inner {
+        opacity: 1;
+        // //controls opening animation
+        @include transition(opacity,0.5s,ease-out,1.2s);
+    }
 }
 
 
