@@ -1476,6 +1476,19 @@ blockquote.alignright {
   letter-spacing: 0.0501777168em;
   line-height: 1.5em; }
 
+@media (min-width: 800px) {
+  .comment-form-author,
+  .comment-form-email,
+  .comment-form-url {
+    width: 32%;
+    float: left;
+    margin-right: 2%; }
+
+  .comment-form-url {
+    margin-right: 0; }
+
+  .comment-form-comment {
+    clear: both; } }
 .comment-form label {
   display: block;
   font-size: 0.6666666667em;

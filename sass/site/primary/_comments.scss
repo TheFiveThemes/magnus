@@ -87,7 +87,6 @@
 
 
 
-
 // Comments FORM 
 
 .comment-form {
@@ -96,6 +95,24 @@
 
 .comment-reply-title small {
     @include text-format(note);
+}
+
+@include respondTo(atleast-medium) {
+    .comment-form-author,
+    .comment-form-email,
+    .comment-form-url {
+        width: 32%;
+        float: left;
+        margin-right: 2%;
+    }
+
+    .comment-form-url {
+        margin-right: 0;
+    }
+
+    .comment-form-comment {
+        clear: both;
+    }
 }
 
 .comment-form label {
