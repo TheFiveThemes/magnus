@@ -9,7 +9,7 @@ a {
 	&:active {
 		color: $color__link-hover;
 		@include transition-property(color, text-decoration, opacity);
-		@include transition-duration(0.15s);
+		@include transition-duration(0.05s);
 		@include transition-timing-function(ease-in-out);
 	}
 	&:focus {
@@ -20,6 +20,7 @@ a {
 		outline: 0;
 	}
 
+	// Transition on mouse-out
 	@include transition-property(color, text-decoration, opacity);
 	@include transition-duration(0.5s);
 	@include transition-timing-function(ease-in-out);

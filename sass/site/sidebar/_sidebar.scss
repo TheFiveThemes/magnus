@@ -17,26 +17,30 @@
     color: white;
     opacity: 0;
 
-    //controls closing animation
+    // closing animation
     @include transition-property(transform, width, opacity);
-    @include transition-duration(0.5s, 0.5s, 0.4s);
+    @include transition-duration(0.4s, 0.4s, 1.4s);
     @include transition-timing-function(ease-out, ease-in, ease-out);
     @include transition-delay(0.05s, 0.1s, 0.05s);
 
     @include respondTo(atleast-medium) {
         width: $size__site-sidebar;
         padding: ms(2) 0;
-        background: rgba($color__background-drawer,.9);
+        background: rgba($color__background-drawer,.95);
     }
 
     .sidebar-inner {
         max-width: ms(16);
         margin: 0 auto;
-        padding: 0;
+        padding: 0 ms(6);
         opacity: 0;
 
-        //controls closing animation
+        // closing animation
         @include transition(opacity,0.4s,ease-out);
+
+        @include respondTo(upto-narrow) {
+            padding: 0 ms(2);
+        }
     }
 
     &::-webkit-scrollbar {
@@ -64,24 +68,24 @@
         width: 100%;
         opacity: 1;
 
-        //controls opening animation
+        // opening animation
         @include transition-property(transform, opacity);
-        @include transition-duration(0.25s, 0.30s);
+        @include transition-duration(0.20s, 0.25s);
         @include transition-timing-function(ease-out);
 
         @include respondTo(atleast-medium) {
             width: $size__site-sidebar;
 
-            //controls opening animation for all media queries above medium
+            // opening animation for all media queries above medium
             @include transition-property(transform, width, opacity);
-            @include transition-duration(0.30s);
+            @include transition-duration(0.25s);
             @include transition-timing-function(ease-out);
             @include transition-delay(0s, 0.15s, 0s);
         }
     }
     .sidebar-inner {
         opacity: 1;
-        // //controls opening animation
+        // // opening animation
         @include transition(opacity,0.5s,ease-out,1.2s);
     }
 }

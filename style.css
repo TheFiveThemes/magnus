@@ -644,9 +644,9 @@ a {
     -webkit-transition-property: color, text-decoration, opacity;
     -moz-transition-property: color, text-decoration, opacity;
     transition-property: color, text-decoration, opacity;
-    -webkit-transition-duration: 0.15s;
-    -moz-transition-duration: 0.15s;
-    transition-duration: 0.15s;
+    -webkit-transition-duration: 0.05s;
+    -moz-transition-duration: 0.05s;
+    transition-duration: 0.05s;
     -webkit-transition-timing-function: ease-in-out;
     -moz-transition-timing-function: ease-in-out;
     transition-timing-function: ease-in-out; }
@@ -939,15 +939,17 @@ a {
   font-size: 0.6666666667em;
   clear: both;
   text-transform: uppercase;
-  line-height: 1; }
+  line-height: 1;
+  font-weight: bold; }
   .sidebar .main-navigation h2 {
     display: none; }
   .sidebar .main-navigation .sub-menu {
     padding-left: 1em;
-    border-left: 2px solid #373851; }
+    border-left: 2px solid #d0d0d6; }
     .sidebar .main-navigation .sub-menu a {
-      font-size: 0.6666666667em;
-      opacity: .5; }
+      font-size: 1em;
+      opacity: .6;
+      padding: 1em 0; }
       .sidebar .main-navigation .sub-menu a:hover {
         opacity: 1; }
   .sidebar .main-navigation li {
@@ -955,7 +957,7 @@ a {
     margin: 0; }
   .sidebar .main-navigation a {
     display: block;
-    padding: 1em 0; }
+    padding: 1.286em 0; }
 
 .comment-navigation .nav-previous a, .comment-navigation .nav-next a,
 .posts-navigation .nav-previous a,
@@ -1651,9 +1653,9 @@ blockquote.alignright {
   -webkit-transition-property: -webkit-transform, width, opacity;
   -moz-transition-property: -moz-transform, width, opacity;
   transition-property: transform, width, opacity;
-  -webkit-transition-duration: 0.5s, 0.5s, 0.4s;
-  -moz-transition-duration: 0.5s, 0.5s, 0.4s;
-  transition-duration: 0.5s, 0.5s, 0.4s;
+  -webkit-transition-duration: 0.4s, 0.4s, 1.4s;
+  -moz-transition-duration: 0.4s, 0.4s, 1.4s;
+  transition-duration: 0.4s, 0.4s, 1.4s;
   -webkit-transition-timing-function: ease-out, ease-in, ease-out;
   -moz-transition-timing-function: ease-out, ease-in, ease-out;
   transition-timing-function: ease-out, ease-in, ease-out;
@@ -1664,15 +1666,18 @@ blockquote.alignright {
     .sidebar {
       width: 21.972515625em;
       padding: 1.5em 0;
-      background: rgba(243, 243, 245, 0.9); } }
+      background: rgba(243, 243, 245, 0.95); } }
   .sidebar .sidebar-inner {
     max-width: 25.62890625em;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 3.375em;
     opacity: 0;
     -webkit-transition: opacity, 0.4s, ease-out;
     -moz-transition: opacity, 0.4s, ease-out;
     transition: opacity, 0.4s, ease-out; }
+    @media (max-width: 480px) {
+      .sidebar .sidebar-inner {
+        padding: 0 1.5em; } }
   .sidebar::-webkit-scrollbar {
     display: none; }
   .sidebar ul, .sidebar ol {
@@ -1696,9 +1701,9 @@ blockquote.alignright {
   -webkit-transition-property: -webkit-transform, opacity;
   -moz-transition-property: -moz-transform, opacity;
   transition-property: transform, opacity;
-  -webkit-transition-duration: 0.25s, 0.3s;
-  -moz-transition-duration: 0.25s, 0.3s;
-  transition-duration: 0.25s, 0.3s;
+  -webkit-transition-duration: 0.2s, 0.25s;
+  -moz-transition-duration: 0.2s, 0.25s;
+  transition-duration: 0.2s, 0.25s;
   -webkit-transition-timing-function: ease-out;
   -moz-transition-timing-function: ease-out;
   transition-timing-function: ease-out; }
@@ -1708,9 +1713,9 @@ blockquote.alignright {
       -webkit-transition-property: -webkit-transform, width, opacity;
       -moz-transition-property: -moz-transform, width, opacity;
       transition-property: transform, width, opacity;
-      -webkit-transition-duration: 0.3s;
-      -moz-transition-duration: 0.3s;
-      transition-duration: 0.3s;
+      -webkit-transition-duration: 0.25s;
+      -moz-transition-duration: 0.25s;
+      transition-duration: 0.25s;
       -webkit-transition-timing-function: ease-out;
       -moz-transition-timing-function: ease-out;
       transition-timing-function: ease-out;
@@ -1728,7 +1733,7 @@ blockquote.alignright {
 --------------------------------------------------------------*/
 .widget {
   margin: 0;
-  padding: 3.375em;
+  padding: 2.25em 0;
   font-size: 0.8573333333em;
   color: #727384;
   text-shadow: 0 1px 2px #f3f3f5;
@@ -1737,7 +1742,7 @@ blockquote.alignright {
     max-width: 100%; }
   @media (max-width: 480px) {
     .widget {
-      padding: 1.5em; } }
+      padding: 1.5em 0; } }
 
 /* Search widget. */
 .widget_search .search-field {

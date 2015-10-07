@@ -1,6 +1,6 @@
 .widget {
 	margin: 0;
-    padding: ms(6);
+    padding: ms(4) 0;
     font-size: ms(-1);
     color: $color__text-sidebar;
     text-shadow: 0 1px 2px $color__text-shadow-sidebar;
@@ -10,9 +10,8 @@
 		max-width: 100%;
 	}
 
-    
     @include respondTo(upto-narrow) {
-        padding: ms(2);
+        padding: ms(2) 0;
     }
 }
 

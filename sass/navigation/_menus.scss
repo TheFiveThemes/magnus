@@ -94,9 +94,6 @@
 
 
 
-
-
-
 // Navigation in sidebar drawer
 
 .sidebar {
@@ -104,17 +101,18 @@
         padding-bottom: ms(4);  
         margin-top: 0;      
 		@include text-format(heading-small);
-
+        font-weight: bold;
 		h2 {
 			display: none;
 		}
 
         .sub-menu { 
             padding-left: ms(0);
-            border-left: 2px solid $color__base-tint15;
+            border-left: 2px solid $color__border-sidebar-navigation;
             a {
-            	font-size: ms(-2);
-            	opacity: .5;
+            	font-size: ms(0);
+            	opacity: .6;
+                padding: ms(0) 0;
             	&:hover {
             		opacity: 1;
             	}
@@ -126,13 +124,8 @@
         }
         a {
         	display: block;
-        	padding: ms(0) 0;
+        	padding: ms(1) 0;
         }
-    }
-
-    .sidebar-toggled & {
-    	.main-navigation a {
-    	}
     }
 }
 
@@ -185,77 +178,3 @@
         text-align: left;
     }
 }
-
-
-
-
-
-
-	// ul { // Parent list Globals
-	// 	list-style: none;
-	// 	margin: 0;
-	// 	padding-left: 0;
-	// 	text-align: right;
-	// 	line-height: 0;
-
-	// 	li, a { // Globals
-	// 		line-height: 1;
-	// 		margin: 0;
-	// 		padding: 0;
-	// 	}
-
-	// 	> li {  // Parent Items
-	// 		line-height: 1;
-	// 		display: inline-block;
-	// 		position: relative;
-	//         padding: 0;
-	//         margin: 0 ms(-8);
-	//         a {
-	//         	padding: 0 0 ms(0) ms(-4);
-	//         }
-	// 	}
-
-	// 	> li > ul {  // Children list  (hidden by default)
-	// 		display: inline-block;
-	// 		text-align: left;
-	// 		position: absolute;
-	// 		top: -999em;
-	// 		left: 0;
-	// 		z-index: 99999;
-	// 		opacity: 0;
-	// 		padding: ms(-8) ms(-7);
-	// 		margin: 0;
-	// 		background: rgba($color__background-drawer,.8);
-
-	// 		li { // All items underneath
-	// 			margin: 0;
-	// 			a { // Children list links
-	// 				width: ms(14);
-	// 				padding: ms(-2) 0;
-	// 				color: rgba($color__headerlink,.8);
-	// 			}
-	// 		}			
-
-	// 		> li > ul {  // Children list
-	// 			padding: 0 0 0 ms(-2);
-	// 			background: transparent;
-	// 			a {
-	// 				color: rgba($color__headerlink,.6);
-	// 			}
-	// 		}
-	// 	}
-
-	// 	> li:hover > ul {
-	// 		top: auto;
-	// 		opacity: 1;
-	// 		> li ul {
-	// 			position: static;
-	// 			opacity: 1;
-	// 		}
-	// 	}
-	// }
-
-	// .current_page_item > a,
-	// .current-menu-item > a,
-	// .current_page_ancestor > a {
-	// }
