@@ -1,23 +1,14 @@
-Theme Name: Magnus
+#Magnus WordPress Theme
+Life is Grand, Show it!
 
-Theme URI: http://thefivethemes.com/themes/magnus
+(http://thefivethemes.com/themes/magnus)
 
-Author: Hugo Baeta
+Magnus is a photoblogging WordPress theme named after the latin word for Grand. It is made to showcase photos in a big and bold way, making the featured image on each post span the full width of the browser window, paired up with beautiful typography and a precise grid layout.
 
-Author URI: http://hugobaeta.com
+Designed and developed originally by [Hugo Baeta](http://hugobaeta.com)
 
-Description: Life is Grand, Show it!
-
-Version: 2.0.0
-
-
-License: GNU General Public License v2 or later
-
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Published under the GNU General Public License v2 or later - This theme, like WordPress, is licensed under the GPL. Use it to make something cool, have fun, and share what you've learned with others.
 
 
-Tags: photoblogging
-
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+##Development of the theme:
+We use grunt to manage Sass. All you have to do is a quick `npm install` on the project root in terminal, and then just run 'grunt' to start watching for changes to the Sass files.
