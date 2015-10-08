@@ -11,4 +11,4 @@ Published under the GNU General Public License v2 or later - This theme, like Wo
 
 
 ##Development of the theme:
-We use grunt to manage Sass. All you have to do is a quick `npm install` on the project root in terminal, and then just run 'grunt' to start watching for changes to the Sass files.
+We use grunt to manage Sass. All you have to do is a quick `npm install` on the project root in terminal, and then just run `grunt` to start watching for changes to the Sass files.
