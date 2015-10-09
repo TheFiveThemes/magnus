@@ -11,6 +11,6 @@ Published under the GNU General Public License v2 or later - This theme, like Wo
 
 Development is done in this github repo. If you find a bug or want to make a request for a feature, you can create an issue, or make a pull request of your patch to the theme. Eventually the theme page on The Five Themes website will display the contributors to each theme.
 
-To compile the themes Sass, there are two options:
+To compile the theme's Sass, there are two options:
 - Use Grunt, all you have to do is a quick `npm install` on the project root in terminal, and then just run `grunt` to start watching for changes to the Sass files. 
 - Uee [Codekit](https://incident57.com/codekit/), there's config file included.
