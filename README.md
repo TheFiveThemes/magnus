@@ -13,4 +13,4 @@ Development is done in this github repo. If you find a bug or want to make a req
 
 To compile the theme's Sass, there are two options:
 - Use Grunt, all you have to do is a quick `npm install` on the project root in terminal, and then just run `grunt` to start watching for changes to the Sass files. 
-- Uee [Codekit](https://incident57.com/codekit/), there's config file included.
+- Uee [Codekit](https://incident57.com/codekit/), there's a config file included.
