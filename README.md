@@ -7,6 +7,8 @@ Designed and developed originally by [Hugo Baeta](http://hugobaeta.com) as part 
 
 Published under the GNU General Public License v2 or later - This theme, like WordPress, is licensed under the GPL. Use it to make something cool, have fun, and share what you've learned with others.
 
+[Check out a demo of Magnus](http://magnus.thefivethemes.com)
+
 ##Development of the theme:
 
 Development is done in this github repo. If you find a bug or want to make a request for a feature, you can create an issue, or make a pull request of your patch to the theme. Eventually the theme page on The Five Themes website will display the contributors to each theme.

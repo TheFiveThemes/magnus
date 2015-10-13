@@ -1,4 +1,13 @@
 table {
-	margin: 0 0 1.5em;
-	width: 100%;
+    margin: 0 0 1.5em;
+    width: 100%;
+    tr th {
+        text-align: left;
+        background: $color__background-table-header;
+        padding: ms(-8) ms(-4);
+    }
+    tr td {
+        border-bottom: 1px solid $color__border-table-row;
+        padding: ms(-8) ms(-4);
+    }
 }
