@@ -28,7 +28,7 @@ function magnus_body_classes( $classes ) {
 	}
 
 	if ( is_singular() && has_post_thumbnail() ) {
-        $classes[] = 'featured-image';    
+        $classes[] = 'featured-image';
     }
 
     if (get_header_image() != '') {
@@ -97,7 +97,7 @@ endif;
 /**
  * Limit number of nav menu items on primary menu
  */
-function my_nav_menu_objects( $sorted_menu_items, $args ) {
+function magnus_nav_menu_objects( $sorted_menu_items, $args ) {
     if ( $args->theme_location != 'secondary' )
         return $sorted_menu_items;
     $unset_top_level_menu_item_ids = array();
@@ -124,6 +124,6 @@ function my_nav_menu_objects( $sorted_menu_items, $args ) {
 
     return $sorted_menu_items;
 }
-add_filter( 'wp_nav_menu_objects', 'my_nav_menu_objects', 10, 2 );
+add_filter( 'wp_nav_menu_objects', 'magnus_nav_menu_objects', 10, 2 );
 
 ?>
