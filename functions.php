@@ -46,7 +46,7 @@ function magnus_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
         'primary' => __( 'Primary Sidebar Navigation', 'magnus' ),
-		'social'  => __( 'Social Links', 'magnus' ),
+				// 'social'  => __( 'Social Links', 'magnus' ),
         'secondary' => __( 'Header Quick Navigation', 'magnus' ),
 	) );
 

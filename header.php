@@ -36,9 +36,9 @@
 
 		<nav id="site-navigation" class="header-navigation" role="navigation">
 			<div class="menu-header-container">
-			<?php wp_nav_menu( 
-			array( 
-				'theme_location' => 'secondary', 
+			<?php wp_nav_menu(
+			array(
+				'theme_location' => 'secondary',
 				'container' => 'false',
 				'menu_id' => 'header-menu',
 				'fallback_cb' => 'false',
@@ -51,10 +51,10 @@
 		</nav><!-- #site-navigation -->
 
 	</header><!-- #masthead -->
-	
+
 
 	<?php if (is_home()) : ?>
-	
+
 	<section id="content" class="blog-home-content">
 
 	<?php else : ?>
@@ -68,7 +68,7 @@
 			$url = wp_get_attachment_image_src( $image_id, 'magnus-large' ); ?>
 
 			<div class="section-image" style="background-image: url(<?php echo esc_attr( $url[0] ); ?>);">
-			</div><!-- .section-image --> 
+			</div><!-- .section-image -->
 
 		<?php elseif ( get_header_image() ) : ?>
 			<img src="<?php header_image(); ?>" width="<?php echo HEADER_IMAGE_WIDTH; ?>" height="<?php echo HEADER_IMAGE_HEIGHT; ?>" alt="" />
@@ -77,4 +77,3 @@
 
 	<section id="content" class="site-content">
 	<?php endif; // end check for blog homepage ?>
-
