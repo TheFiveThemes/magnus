@@ -12,8 +12,8 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<ul class="site-info">
-            <li class="cms-info"><a href="<?php echo esc_url( __( 'http://wordpress.org/', 'magnus' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'magnus' ), 'WordPress' ); ?></a></li>
-			<li class="theme-info"><?php printf( __( 'Theme: %1$s by %2$s for %3$s', 'magnus' ), 'Magnus', 'Hugo Baeta', '<a href="http://thefivethemes.com">The Five Themes</a>' ); ?></li>			
+      <li class="cms-info"><a href="<?php echo esc_url( __( 'http://wordpress.org/', 'magnus' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'magnus' ), 'WordPress' ); ?></a></li>
+			<li class="theme-info"><a href="http://thefivethemes.com"><?php printf( __( 'Theme: %1$s by %2$s for %3$s', 'invenio' ), 'Magnus', 'Hugo&nbsp;Baeta', 'The&nbsp;Five&nbsp;Themes' ); ?></a></li>
 		</ul><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
