@@ -10,18 +10,6 @@
 	  }
 	});
 
-
-	// Fullpage for home.php
-	// $(document).ready(function() {
-	//     $('#fullpage').fullpage({
-	//     	css3: true,
-	//     	easingcss3: 'ease-out',
-	//     	autoScrolling: false,
-	//     });
-	// });
-
-
-
 // Add a class to big image and caption >= 1088px.
 // For some reason it's not working... HELP!
 
@@ -47,7 +35,5 @@
 	// 		} );
 	// 	} );
 	// }
-
-
 
 } )( jQuery );

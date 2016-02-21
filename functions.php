@@ -113,38 +113,38 @@ add_action( 'wp_head', 'magnus_javascript_detection', 0 );
  */
 function magnus_fonts_url() {
     $fonts_url = '';
- 
+
     /* Translators: If there are characters in your language that are not
     * supported by Montserrat, translate this to 'off'. Do not translate
     * into your own language.
     */
     $montserrat = _x( 'on', 'Montserrat font: on or off', 'magnus' );
- 
+
     /* Translators: If there are characters in your language that are not
     * supported by Roboto Slab, translate this to 'off'. Do not translate
     * into your own language.
     */
     $karla = _x( 'on', 'Karla font: on or off', 'magnus' );
- 
+
     if ( 'off' !== $montserrat || 'off' !== $karla ) {
         $font_families = array();
- 
+
         if ( 'off' !== $montserrat ) {
             $font_families[] = 'Montserrat:400,700';
         }
- 
+
         if ( 'off' !== $karla ) {
             $font_families[] = 'Karla:400,700,400italic,700italic';
         }
- 
+
         $query_args = array(
             'family' => urlencode( implode( '|', $font_families ) ),
             'subset' => urlencode( 'latin,latin-ext' ),
         );
- 
+
         $fonts_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
     }
- 
+
     return $fonts_url;
 }
 
@@ -157,7 +157,7 @@ function magnus_scripts() {
 	wp_enqueue_style( 'magnus-fonts', magnus_fonts_url(), array(), null );
 
 	// Add Genericons, used in the main stylesheet.
-    wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.3' );
+  wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.3' );
 
 	// Load our main stylesheet.
 	wp_enqueue_style( 'magnus-style', get_stylesheet_uri() );
@@ -174,11 +174,6 @@ function magnus_scripts() {
 	if ( is_singular() && wp_attachment_is_image() ) {
 		wp_enqueue_script( 'magnus-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20150302' );
 	}
-
-    // If is home, load the fullscreen script
-    if ( is_home() ) {
-        wp_enqueue_script( 'magnus-full-screen', get_template_directory_uri() . '/js/jquery.fullPage.js', array('jquery'), '20120206', true );
-    }
 
 	// Javacript functions in Magnus.
 	wp_enqueue_script( 'magnus-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150302', true );
