@@ -25,7 +25,6 @@
         padding: 0;
         float: left;
         border-bottom: 0;
-        background: $color__background-feature;
 
         overflow: hidden;
 
@@ -47,10 +46,6 @@
             clear: right;
         }
 
-        &:nth-child(even) {
-            background: rgba($color__background-feature,.95);
-        }
-
         .section-inner {
             position: absolute;
             top: 50%;
@@ -65,9 +60,9 @@
             padding: 0 ms(0);
             margin: 0 auto;
             max-width: ms(18);
-            font-size: ms(-2); 
+            font-size: ms(-2);
             text-align: center;
-            
+
             @include respondTo(atleast-extra-wide) {
                 font-size: ms(-1);
             }
@@ -88,7 +83,7 @@
                 }
             }
         }
-        
+
         &:first-child .entry-header {
             font-size: ms(0);
             @include respondTo(atleast-extra-wide) {

@@ -1,19 +1,23 @@
 <?php
 /**
- * Jetpack Compatibility File
- * See: http://jetpack.me/
- *
- * @package Magnus
- */
+	* Jetpack Compatibility File.
+	*
+	* @link https://jetpack.me/
+	*
+	* @package Magnus
+	*/
 
 /**
- * Add theme support for Infinite Scroll.
- * See: http://jetpack.me/support/infinite-scroll/
+ * Jetpack setup function.
+ *
+ * See: https://jetpack.me/support/infinite-scroll/
+ * See: https://jetpack.me/support/responsive-videos/
  */
 function magnus_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
+		'render'    => 'magnus_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
@@ -23,25 +27,15 @@ function magnus_jetpack_setup() {
 add_action( 'after_setup_theme', 'magnus_jetpack_setup' );
 
 /**
- * Add support for the Site Logo
- *
- * @since Magnus 1.0
+ * Custom render function for Infinite Scroll.
  */
-function magnus_site_logo_init() {
-    add_image_size( 'magnus-logo', 192, 192 );
-    add_theme_support( 'site-logo', array( 'size' => 'magnus-logo' ) );
-}
-add_action( 'after_setup_theme', 'magnus_site_logo_init' );
-
-/**
- * Return early if Site Logo is not available.
- *
- * @since Magnus 2.0
- */
-function magnus_the_site_logo() {
-    if ( ! function_exists( 'jetpack_the_site_logo' ) ) {
-        return;
-    } else {
-        jetpack_the_site_logo();
-    }
+function magnus_infinite_scroll_render() {
+	while ( have_posts() ) {
+		the_post();
+		if ( is_search() ) :
+		    get_template_part( 'content', 'search' );
+		else :
+		    get_template_part( 'content', get_post_format() );
+		endif;
+	}
 }

@@ -23,7 +23,7 @@ get_header(); ?>
 			<?php endwhile; ?>
 			</div>
 
-			<?php magnus_posts_navigation(); ?>
+			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
 
@@ -34,6 +34,6 @@ get_header(); ?>
 			</div><!-- #primary -->
 
 		<?php endif; ?>
-		
+
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

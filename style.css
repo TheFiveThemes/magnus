@@ -10,7 +10,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: magnus
 Tags: photoblogging, custom-header, custom-menu, featured-images, featured-image-header, threaded-comments, translation-ready, responsive-layout, one-column
 
-Magnus WordPress Theme, Copyright (C) 2015, Hugo Baeta.
+Magnus WordPress Theme, Copyright (C) 2013-2016, Hugo Baeta.
 Magnus is distributed under the terms of the GNU GPL license.
 
 Magnus is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
@@ -311,7 +311,7 @@ button,
 input,
 select,
 textarea {
-  color: #727384;
+  color: #72727e;
   font-family: "Karla", sans-serif;
   font-size: 21px;
   font-weight: 400;
@@ -326,7 +326,7 @@ form input[type="submit"], .comment-form label {
   clear: both;
   text-transform: uppercase;
   line-height: 1;
-  color: #43445b; }
+  color: #434353; }
   @media (max-width: 480px) {
     h1, h2, h3, h4, h5, h6, form button,
     form input[type="button"],
@@ -376,7 +376,7 @@ form input[type="submit"], .comment-form label {
     transition: font-size 0.2s ease-in-out; } }
 
 .sidebar h2 {
-  color: #727384; }
+  color: #72727e; }
 
 p {
   margin-bottom: 1em; }
@@ -395,13 +395,13 @@ blockquote {
   color: #eb6e78; }
   blockquote cite,
   blockquote cite a {
-    color: #a1a1ad; }
+    color: #a1a1a9; }
 
 address {
   margin: 0 0 1em; }
 
 pre {
-  background: #f3f3f5;
+  background: #f3f3f4;
   font-family: "Courier 10 Pitch", Courier, monospace;
   line-height: 1.929em;
   margin-bottom: 1.6em;
@@ -412,11 +412,11 @@ pre {
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 0.6666666667em;
-  background: #f3f3f5;
+  background: #f3f3f4;
   padding: 0.2962962963em 0.6666666667em; }
 
 abbr, acronym {
-  border-bottom: 1px dotted #a1a1ad;
+  border-bottom: 1px dotted #a1a1a9;
   cursor: help; }
 
 mark, ins {
@@ -465,7 +465,7 @@ blockquote, q {
     content: ""; }
 
 hr {
-  background-color: #f3f3f5;
+  background-color: #f3f3f4;
   border: 0;
   height: 4px;
   margin-bottom: 1em; }
@@ -501,10 +501,10 @@ table {
   width: 100%; }
   table tr th {
     text-align: left;
-    background: rgba(20, 21, 50, 0.05);
+    background: rgba(20, 20, 40, 0.05);
     padding: 0.1975308642em 0.4444444444em; }
   table tr td {
-    border-bottom: 1px solid rgba(20, 21, 50, 0.03);
+    border-bottom: 1px solid rgba(20, 20, 40, 0.03);
     padding: 0.1975308642em 0.4444444444em; }
 
 /*--------------------------------------------------------------
@@ -562,8 +562,8 @@ input[type="password"],
 input[type="search"],
 textarea {
   box-sizing: border-box;
-  color: #727384;
-  border: 1px solid #d0d0d6;
+  color: #72727e;
+  border: 1px solid #d0d0d4;
   border-radius: 3px;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -574,9 +574,9 @@ textarea {
   input[type="password"]:focus,
   input[type="search"]:focus,
   textarea:focus {
-    color: #43445b;
+    color: #434353;
     outline: none;
-    box-shadow: 0 0 1px 4px #e8e8eb;
+    box-shadow: 0 0 1px 4px #e8e8ea;
     -webkit-transition: all 0.15s ease-in-out;
     -moz-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out; }
@@ -586,7 +586,7 @@ textarea {
   input[type="password"]:focus, .sidebar
   input[type="search"]:focus, .sidebar
   textarea:focus {
-    box-shadow: 0 0 1px 4px rgba(232, 232, 235, 0.3); }
+    box-shadow: 0 0 1px 4px rgba(232, 232, 234, 0.3); }
 
 input[type="text"],
 input[type="email"],
@@ -600,7 +600,7 @@ textarea {
   width: 100%; }
 
 .post-password-form {
-  background: #f3f3f5;
+  background: #f3f3f4;
   padding: 3.375em 2.25em; }
   .post-password-form p {
     max-width: 300px;
@@ -619,7 +619,7 @@ textarea {
     text-transform: uppercase;
     line-height: 1;
     font-size: 0.6666666667em;
-    color: #d0d0d6; }
+    color: #d0d0d4; }
   .post-password-form input[type="password"] {
     display: block;
     margin-bottom: 0.6666666667em;
@@ -647,7 +647,7 @@ a {
   a:visited {
     color: #ed7d86; }
   a:hover, a:focus, a:active {
-    color: #43445b;
+    color: #434353;
     -webkit-transition-property: color, text-decoration, opacity;
     -moz-transition-property: color, text-decoration, opacity;
     transition-property: color, text-decoration, opacity;
@@ -698,7 +698,7 @@ a {
     height: 3px;
     border-radius: 1px;
     line-height: 1;
-    background: rgba(232, 232, 235, 0.7); }
+    background: rgba(232, 232, 234, 0.7); }
   .sidebar-toggle span {
     text-indent: -9999px;
     -webkit-transition-property: color, background, opacity, width;
@@ -806,7 +806,7 @@ a {
         -webkit-transition-timing-function: ease-in-out;
         -moz-transition-timing-function: ease-in-out;
         transition-timing-function: ease-in-out;
-        background: #a1a1ad;
+        background: #a1a1a9;
         height: 4px; }
       .sidebar-toggled .sidebar-toggle span:before {
         -webkit-transform: rotate(45deg);
@@ -880,7 +880,7 @@ a {
     width: 100%;
     font-size: 0.6666666667em;
     letter-spacing: 0.1316872428em;
-    color: rgba(232, 232, 235, 0.7);
+    color: rgba(232, 232, 234, 0.7);
     text-decoration: none; }
     .site-header .header-navigation a:hover {
       color: #fff; }
@@ -952,7 +952,7 @@ a {
     display: none; }
   .sidebar .main-navigation .sub-menu {
     padding-left: 1em;
-    border-left: 2px solid #d0d0d6; }
+    border-left: 2px solid #d0d0d4; }
     .sidebar .main-navigation .sub-menu a {
       font-size: 1em;
       opacity: .6;
@@ -1020,11 +1020,11 @@ a {
   width: 1px;
   overflow: hidden; }
   .screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
-    background-color: #f3f3f5;
+    background-color: #f3f3f4;
     border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
-    color: #141532;
+    color: #141428;
     display: block;
     font-size: 14px;
     font-size: 0.875rem;
@@ -1107,7 +1107,7 @@ blockquote.alignright {
   width: 100%;
   padding: 1em 1em 1.286em;
   margin-bottom: 0;
-  background: #373851; }
+  background: #373748; }
   .featured-image .site-header, .header-image .site-header, .blog.home .site-header, .error404 .site-header {
     position: absolute;
     background: transparent;
@@ -1130,7 +1130,7 @@ blockquote.alignright {
     letter-spacing: 0.1316872428em;
     margin: 0 0 0.4444444444em; }
     .site-branding h1 a {
-      color: #e8e8eb;
+      color: #e8e8ea;
       text-decoration: none; }
       .site-branding h1 a:hover {
         color: #fff; }
@@ -1164,7 +1164,7 @@ blockquote.alignright {
   animation: fadein 2s ease-out backwards;
   position: relative;
   overflow: hidden;
-  background: #101128;
+  background: #141428;
   line-height: 0;
   margin-bottom: 2.25em; }
   .site-header-image img {
@@ -1225,7 +1225,7 @@ blockquote.alignright {
 .hentry {
   margin: 0 0 2.25em;
   padding: 0 0 2.25em;
-  border-bottom: 4px solid #f3f3f5; }
+  border-bottom: 4px solid #f3f3f4; }
   .hentry:last-child {
     border-bottom: none; }
 
@@ -1260,7 +1260,7 @@ blockquote.alignright {
   margin-bottom: 0.2962962963em; }
   .entry-header .entry-title a {
     text-decoration: none;
-    color: #43445b; }
+    color: #434353; }
     .entry-header .entry-title a:hover {
       color: #eb6e78; }
 
@@ -1270,11 +1270,11 @@ blockquote.alignright {
   text-transform: uppercase;
   letter-spacing: 0.0501777168em;
   line-height: 1.5em;
-  color: #d0d0d6; }
+  color: #d0d0d4; }
   .entry-header .entry-meta a,
   .entry-footer a {
     text-decoration: none;
-    color: #a1a1ad; }
+    color: #a1a1a9; }
     .entry-header .entry-meta a:hover,
     .entry-footer a:hover {
       color: #eb6e78; }
@@ -1286,7 +1286,7 @@ blockquote.alignright {
 .post-navigation {
   margin: 0 0 2.25em;
   padding: 0 0 2.25em;
-  border-bottom: 4px solid #f3f3f5; }
+  border-bottom: 4px solid #f3f3f4; }
   .post-navigation a {
     text-decoration: none; }
 
@@ -1295,7 +1295,7 @@ blockquote.alignright {
 --------------------------------------------------------------*/
 .blog-home-content .site-main {
   overflow: hidden;
-  background: #101128; }
+  background: #141428; }
 .blog-home-content .section-image {
   position: absolute;
   width: 100%;
@@ -1315,7 +1315,6 @@ blockquote.alignright {
   padding: 0;
   float: left;
   border-bottom: 0;
-  background: #101128;
   overflow: hidden; }
   @media (max-width: 800px) {
     .blog-home-content article {
@@ -1331,8 +1330,6 @@ blockquote.alignright {
       animation: fadein-images 1s ease-out backwards, image-pulse 15s ease-in-out infinite alternate; }
   .blog-home-content article:last-child {
     clear: right; }
-  .blog-home-content article:nth-child(even) {
-    background: rgba(16, 17, 40, 0.95); }
   .blog-home-content article .section-inner {
     position: absolute;
     top: 50%;
@@ -1382,13 +1379,13 @@ blockquote.alignright {
 .search-results .page-header {
   padding: 2.25em 1em 4.34025em;
   margin: 0 0 2.25em;
-  border-bottom: 4px solid #f3f3f5;
+  border-bottom: 4px solid #f3f3f4;
   text-align: center;
-  color: #a1a1ad; }
+  color: #a1a1a9; }
   .archive .page-header .page-title,
   .search-results .page-header .page-title {
     font-size: 1.5em;
-    color: #d0d0d6;
+    color: #d0d0d4;
     margin: 0; }
   .archive .page-header .page-description,
   .search-results .page-header .page-description {
@@ -1419,7 +1416,7 @@ blockquote.alignright {
   list-style: none;
   margin: 0;
   padding-left: 0;
-  border-left: 4px solid #f3f3f5; }
+  border-left: 4px solid #f3f3f4; }
 
 .comment-list .children > li {
   padding-left: calc(32px + 0.8em); }
@@ -1443,7 +1440,7 @@ blockquote.alignright {
   .comment-metadata a,
   .pingback .edit-link a {
     text-decoration: none;
-    color: #a1a1ad; }
+    color: #a1a1a9; }
     .comment-metadata a:hover,
     .pingback .edit-link a:hover {
       color: #eb6e78; }
@@ -1500,7 +1497,7 @@ blockquote.alignright {
   display: block;
   font-size: 0.6666666667em;
   letter-spacing: 0.0877914952em;
-  color: #d0d0d6;
+  color: #d0d0d4;
   padding: 0 0 0.4444444444em; }
 
 .comment-form input[type="text"],
@@ -1544,9 +1541,9 @@ blockquote.alignright {
   letter-spacing: 0.0501777168em;
   line-height: 1.5em;
   text-align: center;
-  color: #d0d0d6;
-  border-top: 4px solid #f3f3f5;
-  border-bottom: 4px solid #f3f3f5;
+  color: #d0d0d4;
+  border-top: 4px solid #f3f3f4;
+  border-bottom: 4px solid #f3f3f4;
   padding: 1em 0; }
 
 /*--------------------------------------------------------------
@@ -1555,8 +1552,8 @@ blockquote.alignright {
 .site-footer {
   padding: 1em 1em 1.286em;
   margin: 2.25em 0 0;
-  background: #f3f3f5;
-  color: #d0d0d6; }
+  background: #f3f3f4;
+  color: #d0d0d4; }
   .site-footer .site-info {
     list-style: none;
     margin: 0;
@@ -1570,7 +1567,7 @@ blockquote.alignright {
       margin: 0 0.6666666667em; }
   .site-footer a {
     display: inline-block;
-    color: #b9b9c2;
+    color: #b9b9bf;
     text-decoration: none; }
     .site-footer a:hover {
       color: #eb6e78; }
@@ -1606,10 +1603,10 @@ blockquote.alignright {
     margin: 0;
     padding: 0;
     border-bottom: 0;
-    background: #101128;
+    background: #141428;
     overflow: hidden; }
     .error404 article:nth-child(even) {
-      background: rgba(16, 17, 40, 0.95); }
+      background: rgba(20, 20, 40, 0.95); }
     .error404 article .section-inner {
       position: absolute;
       top: 50%;
@@ -1667,7 +1664,7 @@ blockquote.alignright {
   overflow: scroll;
   overflow-x: hidden;
   z-index: 9000;
-  background-color: #f3f3f5;
+  background-color: #f3f3f4;
   color: white;
   opacity: 0;
   -webkit-transition-property: -webkit-transform, width, opacity;
@@ -1686,7 +1683,7 @@ blockquote.alignright {
     .sidebar {
       width: 21.972515625em;
       padding: 1.5em 0;
-      background: rgba(243, 243, 245, 0.95); } }
+      background: rgba(243, 243, 244, 0.95); } }
   .sidebar .sidebar-inner {
     max-width: 25.62890625em;
     margin: 0 auto;
@@ -1705,7 +1702,7 @@ blockquote.alignright {
     padding: 0;
     list-style: none; }
   .sidebar a {
-    color: #727384;
+    color: #72727e;
     text-decoration: none; }
     .sidebar a:hover {
       color: #eb6e78; }
@@ -1755,8 +1752,8 @@ blockquote.alignright {
   margin: 0;
   padding: 2.25em 0;
   font-size: 0.8573333333em;
-  color: #727384;
-  text-shadow: 0 1px 2px #f3f3f5;
+  color: #72727e;
+  text-shadow: 0 1px 2px #f3f3f4;
   /* Make sure select elements fit in widgets. */ }
   .widget select, .widget input {
     max-width: 100%; }

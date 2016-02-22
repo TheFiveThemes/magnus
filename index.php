@@ -31,7 +31,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php magnus_posts_navigation(); ?>
+			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
 

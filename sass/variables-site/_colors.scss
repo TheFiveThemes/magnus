@@ -2,7 +2,7 @@
 // Colors
 //
 
-$color__base: #141532;
+$color__base: #141428; //old: #141532
 
 $color__base-tint10: tint($color__base,10%);
 $color__base-tint15: tint($color__base,15%);
@@ -51,7 +51,7 @@ $color__background-ins: #fff9c0;
 
 $color__background-header: $color__base-tint15;
 $color__background-archive-header: $color__base-tint90;
-$color__background-feature: $color__base-shade20;
+$color__background-feature: $color__base;
 $color__background-drawer: $color__base-tint95;
 $color__background-footer: $color__base-tint95;
 $color__background-404: $color__accent;
