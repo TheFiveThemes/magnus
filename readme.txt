@@ -42,11 +42,12 @@ Magnus supports two theme locations:
 == Changelog ==
 
 = 2.2 =
-* Several bug fixes suggested by the themes review team.
-* Added this readme.txt file including some documentation.
+* Updated theme screenshot
+* Bug fixes
 
 = 2.1 =
-* Version ready for theme repository submission.
+* Several bug fixes suggested by the themes review team.
+* Added this readme.txt file including some documentation.
 
 = 2.0 =
 * Release of the new version of the theme, a complete re-write form original.
@@ -60,4 +61,4 @@ Magnus supports two theme locations:
 * Magnus WordPress Theme, Copyright (C) 2013-2016, Hugo Baeta, [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
-* Theme screenshot uses photography from [Death to Stock](deathtothestockphoto.com)
+* Theme screenshot uses photography by Will Langenberg, from [Unsplash](unsplash.com)
