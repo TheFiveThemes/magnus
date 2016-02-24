@@ -41,6 +41,9 @@ Magnus supports two theme locations:
 
 == Changelog ==
 
+= 2.3 =
+* Bug fixes
+
 = 2.2 =
 * Updated theme screenshot
 * Bug fixes
@@ -53,7 +56,7 @@ Magnus supports two theme locations:
 * Release of the new version of the theme, a complete re-write form original.
 
 = 1.0 =
-* Inittial release
+* Initial release
 
 
 == Credits ==
