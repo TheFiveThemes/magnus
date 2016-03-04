@@ -1,7 +1,7 @@
 #Magnus WordPress Theme
 Life is Grand, Show it!
 
-Magnus is a photoblogging WordPress theme named after the latin word for Grand. It is made to showcase photos in a big and bold way, making the featured image on each post span the full width of the browser window, paired up with beautiful typography and a precise grid layout.
+Magnus is a photoblogging WordPress theme named after the latin word for Grand. It was made to showcase photos in a big and bold way, making the featured image on each post span the full width of the browser window, paired up with beautiful typography and a carefully planned layout.
 
 Designed and developed originally by [Hugo Baeta](http://hugobaeta.com) as part of [The Five Themes](http://thefivethemes.com/themes/magnus)
 
