@@ -15,7 +15,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<div id="fullpage" class="site-main">
+			<div id="main" class="site-main">
 			<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php get_template_part( 'content-home', get_post_format() ); ?>

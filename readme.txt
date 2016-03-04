@@ -5,7 +5,7 @@ Requires at least: 4.3
 Tested up to: 4.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: hotoblogging, custom-header, custom-menu, featured-images, featured-image-header, threaded-comments, translation-ready, responsive-layout, one-column
+Tags: photoblogging, custom-header, custom-menu, featured-images, featured-image-header, threaded-comments, translation-ready, responsive-layout, one-column
 
 
 == Description ==

@@ -7,16 +7,6 @@
 
     margin-bottom: ms(4);
 
-    img {
-        max-width: 100%;
-        min-width: 100%;
-        width: auto;
-        height: auto;
-        opacity: 0.6;
-        @include animation(fadein-images 1s ease-out backwards, image-pulse 15.0s ease-in-out infinite alternate);
-        @include transform-origin(bottom center);
-    }
-
     .section-image {
         position: absolute;
         width: 100%;
@@ -27,27 +17,16 @@
         background-position: center;
         background-repeat: no-repeat;
 
-        display: none;
+        display: block;
     }
 
     .featured-image & {
-        @include respondTo(upto-narrow) {
-            height: 60vh;
-            img {
-                display: none;
-            }
-            .section-image {
-                display: block;
-            }
+        height: 70vh;
+        @include respondTo(upto-medium) {
+            height: 100vh;
         }
         @include respondTo(atleast-wide) {
             height: 100vh;
-            img {
-                display: none;
-            }
-            .section-image {
-                display: block;
-            }
         }
     }
 }

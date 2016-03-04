@@ -56,9 +56,9 @@
 	<?php else : ?>
 	<section class="site-header-image">
 		<?php // Check if this is a post or page, if it has a thumbnail, and if it's a big one
-		if ( is_singular() && has_post_thumbnail( $post->ID ) ) :
+		if ( is_singular() && has_post_thumbnail(  get_the_ID() ) ) :
 			// Houston, we have a new header image!
-			echo get_the_post_thumbnail( $post->ID, 'magnus-large' );
+			//echo get_the_post_thumbnail( $post->ID, 'magnus-large' );
 
 			$image_id = get_post_thumbnail_id();
 			$url = wp_get_attachment_image_src( $image_id, 'magnus-large' ); ?>
