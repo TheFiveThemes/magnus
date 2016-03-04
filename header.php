@@ -27,10 +27,7 @@
 
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
-			<?php $description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<h2 class="site-description"><?php echo $description; ?></h2>
-			<?php endif; ?>
+			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="header-navigation" role="navigation">
