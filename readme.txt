@@ -41,6 +41,11 @@ Magnus supports two theme locations:
 
 == Changelog ==
 
+= 2.4 =
+* Cleaned up the featured image code
+* Updated theme description
+* Bug fixes
+
 = 2.3 =
 * Bug fixes
 
