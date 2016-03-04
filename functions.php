@@ -57,12 +57,6 @@ function magnus_setup() {
 	add_theme_support( 'html5', array(
 		'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
 	) );
-
-	/*
-	 * This theme styles the visual editor to resemble the theme style,
-	 * specifically font, colors, icons, and column width.
-	 */
-	add_editor_style( array( 'editor-style.css', magnus_fonts_url() ) );
 }
 endif; // magnus_setup
 add_action( 'after_setup_theme', 'magnus_setup' );
@@ -155,9 +149,6 @@ function magnus_fonts_url() {
 function magnus_scripts() {
 	// Add custom fonts, used in the main stylesheet.
 	wp_enqueue_style( 'magnus-fonts', magnus_fonts_url(), array(), null );
-
-	// Add Genericons, used in the main stylesheet.
-  wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.3' );
 
 	// Load our main stylesheet.
 	wp_enqueue_style( 'magnus-style', get_stylesheet_uri() );
