@@ -41,6 +41,10 @@ function magnus_customize_css() {
 
 	$accent_color = get_theme_mod( 'accent_color', '#50e3c2' );
 
+	if( '#50e3c2' === $accent_color ) {
+		return;
+	}
+
 	?>
 	<style type="text/css">
 		a {
